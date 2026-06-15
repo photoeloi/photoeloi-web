@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K8WRY5DCLN"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-K8WRY5DCLN');</script>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Portfolio | Eloi Garcia Fotógrafo Barcelona</title>
+  <meta name="description" content="Portfolio de fotografía de moda, editorial y ecommerce en Barcelona. Proyectos para Suzet Atelier, Julia Martínez, Gianni Versace, Glenis Swimwear y más."/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://photoeloi.com/portfolio"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://photoeloi.com/portfolio"/>
+  <meta property="og:title" content="Portfolio | Eloi Garcia Fotógrafo Barcelona"/>
+  <meta property="og:description" content="Portfolio de fotografía de moda, editorial y ecommerce en Barcelona. Proyectos para marcas nacionales e internacionales."/>
+  <meta property="og:image" content="https://res.cloudinary.com/dmajnty6m/image/fetch/w_1200,h_630,c_fill,q_auto,f_auto/https://images.squarespace-cdn.com/content/v1/6596e42a7a382c0112cf48ee/1727947708445-LD26DZKU05VCFISWF482/_K6A0500-Recuperado.jpg"/>
+  <meta property="og:locale" content="es_ES"/>
+  <meta property="og:site_name" content="Eloi Garcia Fotógrafo"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Portfolio | Eloi Garcia Fotógrafo Barcelona"/>
+  <meta name="twitter:description" content="Portfolio de fotografía de moda, editorial y ecommerce en Barcelona."/>
+  <meta name="twitter:image" content="https://res.cloudinary.com/dmajnty6m/image/fetch/w_1200,h_630,c_fill,q_auto,f_auto/https://images.squarespace-cdn.com/content/v1/6596e42a7a382c0112cf48ee/1727947708445-LD26DZKU05VCFISWF482/_K6A0500-Recuperado.jpg"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --bg:#fafaf8;
+      --surface:#f2f2ef;
+      --border:rgba(0,0,0,0.08);
+      --muted:rgba(0,0,0,0.4);
+      --text:rgba(0,0,0,0.75);
+      --dark:#111;
+      --accent:#b5925a;
+      --serif:'Cormorant Garamond',Georgia,serif;
+      --sans:'Inter',Helvetica,sans-serif;
+    }
+    html{scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--text);font-family:var(--sans);font-weight:300;font-size:16px;line-height:1.6;overflow-x:hidden;cursor:none}
+
+    /* Cursor */
+    @media(pointer:fine){*{cursor:none!important}}
+    #cur{position:fixed;top:0;left:0;width:32px;height:32px;border:1.5px solid rgba(181,146,90,0.55);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);will-change:left,top;transition:width .25s,height .25s,border-color .25s,opacity .3s;opacity:0}
+    body.hov #cur{width:22px;height:22px;border-color:rgba(181,146,90,0.9)}
+    @media(pointer:coarse){#cur{display:none}}
+
+    /* Nav */
+    nav{position:fixed;top:0;left:0;right:0;z-index:300;height:68px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:0 44px;background:rgba(250,250,248,0.95);backdrop-filter:blur(16px);border-bottom:1px solid rgba(0,0,0,0.07)}
+    .nav-links{display:flex;gap:24px;list-style:none;align-items:center}
+    .nav-links a{font-size:10px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:#111;text-decoration:none;opacity:.42;transition:opacity .25s}
+    .nav-links a:hover,.nav-links a.active{opacity:1}
+    .nav-logo{font-family:var(--serif);font-size:17px;font-weight:300;letter-spacing:.14em;text-transform:uppercase;color:#111;text-decoration:none;text-align:center;white-space:nowrap}
+    .nav-logo em{font-style:italic}
+    .nav-right{display:flex;align-items:center;justify-content:flex-end;gap:14px}
+    .nav-social{display:flex;gap:14px;list-style:none;align-items:center}
+    .nav-social a{display:flex;align-items:center;color:#111;opacity:.32;transition:opacity .25s}
+    .nav-social a:hover{opacity:1}
+    .nav-social svg{width:15px;height:15px;fill:currentColor;display:block}
+    .nav-burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:none;padding:6px;width:36px}
+    .nav-burger span{display:block;height:1px;background:#111;transition:transform .3s,opacity .3s,width .3s}
+    .nav-burger span:nth-child(1){width:22px}
+    .nav-burger span:nth-child(2){width:14px}
+    .nav-burger span:nth-child(3){width:18px}
+    .nav-burger.open span:nth-child(1){transform:translateY(6px) rotate(45deg);width:22px}
+    .nav-burger.open span:nth-child(2){opacity:0}
+    .nav-burger.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg);width:22px}
+    .nav-overlay{position:fixed;inset:0;z-index:299;background:rgba(250,250,248,.97);backdrop-filter:blur(20px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;opacity:0;pointer-events:none;transition:opacity .35s;padding:80px 24px}
+    .nav-overlay.open{opacity:1;pointer-events:all}
+    .overlay-links{list-style:none;display:flex;flex-direction:column;align-items:center;width:100%}
+    .overlay-links a{font-family:var(--serif);font-size:clamp(28px,5vw,44px);font-weight:300;color:#111;text-decoration:none;letter-spacing:.06em;opacity:.35;transition:opacity .25s;display:block;padding:10px 0;text-align:center}
+    .overlay-links a:hover,.overlay-links a.active{opacity:1}
+    .overlay-social{display:flex;gap:24px;margin-top:40px;list-style:none}
+    .overlay-social a{display:flex;align-items:center;color:#111;opacity:.3;transition:opacity .25s}
+    .overlay-social a:hover{opacity:1}
+    .overlay-social svg{width:18px;height:18px;fill:currentColor}
+    .lang-btn{background:none;border:none;display:inline-flex;align-items:center;gap:5px;font-size:9px;letter-spacing:.15em;font-family:var(--sans);color:rgba(0,0,0,.45);padding:0;margin-right:16px;transition:color .25s}
+    .lang-btn:hover{color:var(--accent)}
+    .lang-btn svg{width:13px;height:13px;fill:currentColor;flex-shrink:0}
+    @media(max-width:768px){.lang-btn{display:none}.lang-btn--overlay{display:inline-flex!important;font-size:14px!important;letter-spacing:.2em!important;color:rgba(0,0,0,.5)!important;margin:20px auto 0!important}.lang-btn--overlay svg{width:18px!important;height:18px!important}.lang-btn--overlay .lang-current{font-size:14px!important}}
+    .nav-back{display:none;align-items:center;gap:10px;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);background:none;border:none;cursor:none;padding:0;margin-bottom:20px;transition:color .25s}
+    .nav-back:hover{color:var(--dark)}
+    .nav-back svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:1.5;transition:transform .25s}
+    .nav-back:hover svg{transform:translateX(-3px)}
+
+    /* Portfolio index */
+    #portfolio-index{padding-top:96px;min-height:100vh}
+    .portfolio-header{padding:48px 48px 40px;display:flex;align-items:flex-end;justify-content:space-between;border-bottom:1px solid var(--border)}
+    .portfolio-header-left{}
+    .portfolio-label{font-size:9px;letter-spacing:.35em;text-transform:uppercase;color:var(--accent);margin-bottom:10px;display:block}
+    .portfolio-title{font-family:var(--serif);font-size:52px;font-weight:300;line-height:1;color:var(--dark)}
+    .portfolio-title em{font-style:italic}
+    .portfolio-count{display:none}
+
+    /* Grid */
+    .projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;padding:2px}
+    @media(max-width:900px){.projects-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:600px){.projects-grid{grid-template-columns:1fr}}
+
+    .project-card{position:relative;overflow:hidden;aspect-ratio:3/4;cursor:none;opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+    .project-card.visible{opacity:1;transform:translateY(0)}
+    .project-card img{width:100%;height:100%;object-fit:cover;filter:brightness(.92) saturate(.88);transition:transform .8s cubic-bezier(.25,.46,.45,.94),filter .5s}
+    .project-card:hover img{transform:scale(1.06);filter:brightness(1) saturate(1)}
+    .project-card-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.65) 0%,rgba(0,0,0,.1) 50%,transparent 100%);opacity:0;transition:opacity .4s}
+    .project-card:hover .project-card-overlay{opacity:1}
+    .project-card-info{position:absolute;bottom:0;left:0;right:0;padding:28px 24px;transform:translateY(8px);opacity:0;transition:all .4s}
+    .project-card:hover .project-card-info{transform:translateY(0);opacity:1}
+    .project-card-num{font-size:9px;letter-spacing:.3em;color:var(--accent);margin-bottom:6px}
+    .project-card-title{font-family:var(--serif);font-size:20px;font-weight:300;color:#fff;line-height:1.2}
+    .project-card-arrow{position:absolute;top:20px;right:20px;width:36px;height:36px;border:1px solid rgba(255,255,255,.4);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:14px;opacity:0;transform:scale(.8);transition:all .35s}
+    .project-card:hover .project-card-arrow{opacity:1;transform:scale(1)}
+
+    /* Project detail view */
+    #project-view{display:none;padding-top:96px;min-height:100vh;opacity:0;transition:opacity .4s}
+    #project-view.visible{opacity:1}
+
+    .project-detail-header{padding:48px 48px 36px;border-bottom:1px solid var(--border);display:flex;align-items:flex-end;justify-content:space-between}
+    .project-detail-label{font-size:9px;letter-spacing:.35em;text-transform:uppercase;color:var(--accent);margin-bottom:10px;display:block}
+    .project-detail-title{font-family:var(--serif);font-size:clamp(36px,4vw,60px);font-weight:300;color:var(--dark);line-height:1}
+    .project-detail-title em{font-style:italic}
+    .project-detail-count{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted)}
+
+    /* Masonry gallery */
+    .project-gallery{column-count:3;column-gap:3px;padding:3px}
+    @media(max-width:900px){.project-gallery{column-count:2}}
+    @media(max-width:600px){.project-gallery{column-count:1}}
+
+    .gallery-item{break-inside:avoid;margin-bottom:3px;overflow:hidden;cursor:none;position:relative;opacity:0;transform:translateY(15px);transition:opacity .5s ease,transform .5s ease}
+    .gallery-item.visible{opacity:1;transform:translateY(0)}
+    .gallery-item img{width:100%;display:block;filter:brightness(.95) saturate(.9);transition:transform .6s cubic-bezier(.25,.46,.45,.94),filter .4s}
+    .gallery-item:hover img{transform:scale(1.04);filter:brightness(1) saturate(1)}
+    .gallery-item::after{content:'';position:absolute;inset:0;background:rgba(0,0,0,0);transition:background .3s}
+    .gallery-item:hover::after{background:rgba(0,0,0,.06)}
+
+    /* Video embed */
+    .video-wrap{padding:48px;max-width:900px;margin:0 auto}
+    .video-wrap iframe{width:100%;aspect-ratio:16/9;border:none;display:block}
+    .video-placeholder{aspect-ratio:16/9;background:var(--surface);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;border:1px dashed var(--border)}
+    .video-placeholder span{font-family:var(--serif);font-size:18px;color:var(--muted)}
+    .video-placeholder small{font-size:11px;letter-spacing:.1em;color:rgba(0,0,0,.3)}
+
+    /* Lightbox */
+    #lightbox{position:fixed;inset:0;z-index:1000;background:rgba(10,10,10,.97);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .35s;overflow:hidden;touch-action:none}
+    #lightbox.open{opacity:1;pointer-events:all}
+    #lightbox img{max-width:90vw;max-height:90vh;object-fit:contain;transform:scale(.96);transition:transform .35s}
+    #lightbox.open img{transform:scale(1)}
+    .lb-close{position:absolute;top:24px;right:32px;font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:rgba(255,255,255,.5);background:none;border:none;cursor:none;transition:color .3s}
+    .lb-close:hover{color:#fff}
+    .lb-prev,.lb-next{position:absolute;top:50%;transform:translateY(-50%);background:none;border:none;color:rgba(255,255,255,.35);font-size:11px;letter-spacing:.2em;text-transform:uppercase;cursor:none;padding:20px;transition:color .3s}
+    .lb-prev:hover,.lb-next:hover{color:#fff}
+    .lb-prev{left:24px}
+    .lb-next{right:24px}
+    .lb-counter{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);font-size:10px;letter-spacing:.2em;color:rgba(255,255,255,.3)}
+
+    /* Footer */
+    .portfolio-footer{padding:40px 48px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center}
+    .footer-copy{font-size:11px;color:rgba(0,0,0,.3);letter-spacing:.05em}
+    .footer-cta{display:inline-flex;align-items:center;gap:12px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--dark);text-decoration:none;border-bottom:1px solid rgba(0,0,0,.2);padding-bottom:4px;transition:border-color .3s,gap .3s}
+    .footer-cta:hover{border-color:var(--accent);gap:18px}
+    .footer-cta::after{content:'→'}
+
+    @media(max-width:768px){
+      body{cursor:auto}
+      #cur-dot,#cur-ring{display:none}
+      nav{padding:0 20px}.nav-links{display:none}.nav-social{display:none}.nav-right{gap:0}.nav-burger{display:flex}
+      .portfolio-header,.project-detail-header{padding:28px 20px 24px;flex-direction:column;align-items:flex-start;gap:12px}
+      .portfolio-title{font-size:36px}
+      .portfolio-count{font-size:50px}
+      .portfolio-footer{flex-direction:column;gap:20px;padding:28px 20px}
+    }
+  </style>
+</head>
+<body data-page="portfolio">
+
+<div id="cur"></div>
+
+<!-- Navigation -->
+<nav>
+  <ul class="nav-links">
+    <li><a href="index.html" data-i18n="nav-home">Home</a></li>
+    <li><a href="portfolio.html" class="active" data-i18n="nav-portfolio">Portfolio</a></li>
+    <li><a href="magazine.html" data-i18n="nav-magazine">Magazine</a></li>
+    <li><a href="ecommerce.html" data-i18n="nav-ecommerce">IA · Ecommerce</a></li>
+    <li><a href="estudio.html" data-i18n="nav-estudio">Estudio</a></li>
+    <li><a href="contacto.html" data-i18n="nav-contacto">Contacto</a></li>
+  </ul>
+  <a href="index.html" class="nav-logo"><em>Eloi</em> Garcia</a>
+  <div class="nav-right">
+    <ul class="nav-social">
+      <li><a href="https://instagram.com/photoeloi" target="_blank" title="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a></li>
+      <li><a href="https://linkedin.com" target="_blank" title="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a></li>
+      <li><a href="https://vimeo.com/user185593708" target="_blank" title="Vimeo"><svg viewBox="0 0 24 24"><path d="M23.977 6.416c-.105 2.338-1.739 5.543-4.894 9.609-3.268 4.247-6.026 6.37-8.29 6.37-1.409 0-2.578-1.294-3.553-3.881L5.322 11.4C4.603 8.816 3.834 7.522 3.01 7.522c-.179 0-.806.378-1.881 1.132L0 7.197c1.185-1.044 2.351-2.084 3.501-3.128C5.08 2.701 6.266 1.984 7.055 1.91c1.867-.18 3.016 1.1 3.447 3.838.465 2.953.789 4.789.971 5.507.539 2.45 1.131 3.674 1.776 3.674.502 0 1.256-.796 2.265-2.385 1.004-1.589 1.54-2.797 1.612-3.628.144-1.371-.395-2.061-1.614-2.061-.574 0-1.167.121-1.777.391 1.186-3.868 3.434-5.757 6.762-5.637 2.473.06 3.628 1.664 3.48 4.807l-.001.045z"/></svg></a></li>
+      <li><a href="https://www.behance.net/photoeloi" target="_blank" title="Behance"><svg viewBox="0 0 24 24"><path d="M6.938 4.503c.702 0 1.34.06 1.92.188.577.13 1.07.33 1.485.604.408.271.729.625.96 1.057.227.43.34.958.34 1.58 0 .68-.154 1.248-.463 1.7-.31.453-.753.816-1.337 1.094.804.232 1.407.645 1.802 1.227.395.582.595 1.284.595 2.108 0 .688-.13 1.286-.388 1.795-.258.51-.615.934-1.072 1.276-.457.34-.99.595-1.59.765-.6.172-1.228.258-1.884.258H0V4.503h6.938zm-.495 5.47c.508 0 .925-.107 1.253-.32.326-.213.49-.57.49-1.07 0-.286-.053-.523-.154-.712-.1-.19-.242-.34-.416-.45-.174-.11-.378-.19-.608-.237-.23-.048-.475-.072-.732-.072H3.14v2.86h3.303zm.116 5.683c.29 0 .562-.03.818-.085.255-.054.476-.146.662-.274.186-.13.335-.307.445-.534.11-.226.165-.516.165-.872 0-.692-.192-1.181-.578-1.468-.387-.286-.896-.43-1.528-.43H3.14v3.663h3.42zm9.17.91c.34.332.826.498 1.456.498.454 0 .843-.11 1.172-.336.328-.225.53-.462.604-.71h2.374c-.38 1.178-1.006 2.015-1.87 2.515-.866.5-1.906.75-3.12.75-.85 0-1.614-.134-2.295-.404-.682-.27-1.255-.655-1.725-1.154-.47-.498-.83-1.093-1.086-1.785-.257-.693-.386-1.455-.386-2.29 0-.806.134-1.556.403-2.25.268-.694.64-1.294 1.12-1.8.48-.506 1.054-.9 1.72-1.184.67-.285 1.41-.427 2.222-.427.908 0 1.7.175 2.38.524.677.35 1.232.818 1.66 1.41.426.59.73 1.265.91 2.022.18.756.235 1.553.165 2.395H15.73c0 .694.17 1.246.51 1.578l-.001.001zm2.625-5.26c-.275-.302-.69-.453-1.245-.453-.363 0-.665.063-.905.19-.24.128-.433.284-.58.47-.148.188-.253.39-.315.606-.062.216-.1.418-.11.604h3.623c-.08-.623-.29-1.115-.468-1.417z"/></svg></a></li>
+    </ul>
+    <button class="lang-btn"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg><span class="lang-current">EN</span></button>
+    <button class="nav-burger" id="navBurger"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="nav-overlay" id="navOverlay">
+  <ul class="overlay-links">
+    <li><a href="index.html" data-i18n="nav-home">Home</a></li>
+    <li><a href="portfolio.html" class="active" data-i18n="nav-portfolio">Portfolio</a></li>
+    <li><a href="magazine.html" data-i18n="nav-magazine">Magazine</a></li>
+    <li><a href="ecommerce.html" data-i18n="nav-ecommerce">IA · Ecommerce</a></li>
+    <li><a href="estudio.html" data-i18n="nav-estudio">Estudio</a></li>
+    <li><a href="contacto.html" data-i18n="nav-contacto">Contacto</a></li>
+  </ul>
+    <button class="lang-btn lang-btn--overlay" style="margin:24px auto 0;color:rgba(0,0,0,.5);font-size:10px;letter-spacing:.2em"><svg viewBox="0 0 24 24" style="width:14px;height:14px;fill:currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg><span class="lang-current">EN</span></button>
+  <ul class="overlay-social">
+    <li><a href="https://instagram.com/photoeloi" target="_blank" title="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a></li>
+    <li><a href="https://linkedin.com" target="_blank" title="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a></li>
+    <li><a href="https://vimeo.com/user185593708" target="_blank" title="Vimeo"><svg viewBox="0 0 24 24"><path d="M23.977 6.416c-.105 2.338-1.739 5.543-4.894 9.609-3.268 4.247-6.026 6.37-8.29 6.37-1.409 0-2.578-1.294-3.553-3.881L5.322 11.4C4.603 8.816 3.834 7.522 3.01 7.522c-.179 0-.806.378-1.881 1.132L0 7.197c1.185-1.044 2.351-2.084 3.501-3.128C5.08 2.701 6.266 1.984 7.055 1.91c1.867-.18 3.016 1.1 3.447 3.838.465 2.953.789 4.789.971 5.507.539 2.45 1.131 3.674 1.776 3.674.502 0 1.256-.796 2.265-2.385 1.004-1.589 1.54-2.797 1.612-3.628.144-1.371-.395-2.061-1.614-2.061-.574 0-1.167.121-1.777.391 1.186-3.868 3.434-5.757 6.762-5.637 2.473.06 3.628 1.664 3.48 4.807l-.001.045z"/></svg></a></li>
+    <li><a href="https://www.behance.net/photoeloi" target="_blank" title="Behance"><svg viewBox="0 0 24 24"><path d="M6.938 4.503c.702 0 1.34.06 1.92.188.577.13 1.07.33 1.485.604.408.271.729.625.96 1.057.227.43.34.958.34 1.58 0 .68-.154 1.248-.463 1.7-.31.453-.753.816-1.337 1.094.804.232 1.407.645 1.802 1.227.395.582.595 1.284.595 2.108 0 .688-.13 1.286-.388 1.795-.258.51-.615.934-1.072 1.276-.457.34-.99.595-1.59.765-.6.172-1.228.258-1.884.258H0V4.503h6.938zm-.495 5.47c.508 0 .925-.107 1.253-.32.326-.213.49-.57.49-1.07 0-.286-.053-.523-.154-.712-.1-.19-.242-.34-.416-.45-.174-.11-.378-.19-.608-.237-.23-.048-.475-.072-.732-.072H3.14v2.86h3.303zm.116 5.683c.29 0 .562-.03.818-.085.255-.054.476-.146.662-.274.186-.13.335-.307.445-.534.11-.226.165-.516.165-.872 0-.692-.192-1.181-.578-1.468-.387-.286-.896-.43-1.528-.43H3.14v3.663h3.42zm9.17.91c.34.332.826.498 1.456.498.454 0 .843-.11 1.172-.336.328-.225.53-.462.604-.71h2.374c-.38 1.178-1.006 2.015-1.87 2.515-.866.5-1.906.75-3.12.75-.85 0-1.614-.134-2.295-.404-.682-.27-1.255-.655-1.725-1.154-.47-.498-.83-1.093-1.086-1.785-.257-.693-.386-1.455-.386-2.29 0-.806.134-1.556.403-2.25.268-.694.64-1.294 1.12-1.8.48-.506 1.054-.9 1.72-1.184.67-.285 1.41-.427 2.222-.427.908 0 1.7.175 2.38.524.677.35 1.232.818 1.66 1.41.426.59.73 1.265.91 2.022.18.756.235 1.553.165 2.395H15.73c0 .694.17 1.246.51 1.578l-.001.001zm2.625-5.26c-.275-.302-.69-.453-1.245-.453-.363 0-.665.063-.905.19-.24.128-.433.284-.58.47-.148.188-.253.39-.315.606-.062.216-.1.418-.11.604h3.623c-.08-.623-.29-1.115-.468-1.417z"/></svg></a></li>
+  </ul>
+</div>
+
+<!-- PORTFOLIO INDEX -->
+<div id="portfolio-index">
+  <div class="portfolio-header">
+    <div class="portfolio-header-left">
+      <span class="portfolio-label" data-i18n="pf-label">Trabajos</span>
+      <h1 class="portfolio-title" data-i18n-html="pf-title">Port<em>folio</em></h1>
+    </div>
+    <div class="portfolio-count">24</div>
+  </div>
+
+  <div class="projects-grid" id="projects-grid"></div>
+
+  <div class="portfolio-footer">
+    <span class="footer-copy" data-i18n="footer-copy">© 2026 Eloi Garcia · photoeloi.com</span>
+    <a href="contacto.html" class="footer-cta">Reservar sesión</a>
+  </div>
+</div>
+
+<!-- PROJECT DETAIL VIEW -->
+<div id="project-view">
+  <div class="project-detail-header">
+    <div>
+      <button id="nav-back" class="nav-back" onclick="closeProject()">
+        <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+        Volver al portfolio
+      </button>
+      <span class="project-detail-label" id="detail-label">Proyecto</span>
+      <h2 class="project-detail-title" id="detail-title"></h2>
+    </div>
+    <div class="project-detail-count" id="detail-count"></div>
+  </div>
+  <div class="project-gallery" id="project-gallery"></div>
+  <div class="portfolio-footer">
+    <span class="footer-copy" data-i18n="footer-copy">© 2026 Eloi Garcia · photoeloi.com</span>
+    <a href="#" class="footer-cta" onclick="closeProject();return false">Ver todos los proyectos</a>
+  </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" onclick="if(!event.target.closest('button'))closeLightbox()" onwheel="event.preventDefault()" ontouchmove="event.preventDefault()">
+  <button class="lb-close" onclick="closeLightbox()">Cerrar ×</button>
+  <button class="lb-prev" onclick="lbNav(-1)">← Anterior</button>
+  <img id="lb-img" src="" alt="" style="cursor:zoom-out"/>
+  <button class="lb-next" onclick="lbNav(1)">Siguiente →</button>
+  <div class="lb-counter" id="lb-counter"></div>
+</div>
+
+<script>
+const BASE = 'https://res.cloudinary.com/dmajnty6m/image/fetch/https://images.squarespace-cdn.com/content/v1/6596e42a7a382c0112cf48ee/';
+
+const projects = [
+  {
+    id:'suzet-atelier',title:'Suzet Atelier',label:'Fotografía de marca',
+    cover: BASE+'1727947708445-LD26DZKU05VCFISWF482/_K6A0500-Recuperado.jpg',
+    images:[
+      BASE+'514cc779-4c8e-4f38-abfb-f69000ebd0b5/_K6A0296+copia.jpg',
+      BASE+'77d76d16-75d8-4fa9-bcb8-257d36f04a06/_K6A0298+copia.jpg',
+      BASE+'b0fa7866-3991-4402-9793-35a47c1cad16/_K6A0386-Recuperado.jpg',
+      BASE+'d16c7ce8-1170-404c-82a0-2078f128f33a/_K6A0499-Recuperado.jpg',
+      BASE+'3e6e97bb-d14d-4617-8926-737e1208e96b/_K6A0500-Recuperado.jpg',
+      BASE+'5abf4f0b-596f-4dd0-9a8e-469c54076c58/_K6A0538-Recuperado.jpg',
+      BASE+'429951e4-afb2-4b50-ab5c-8e72c9aa3fa2/_K6A0126+copia+2.jpg',
+      BASE+'e0849421-7e8a-4d6e-ab1c-9ee15049f7b0/_K6A0174+copia+2.jpg',
+      BASE+'ebe2eeb0-e113-4b60-97eb-aa3bb21c56f7/_K6A0231+copia+2.jpg',
+      BASE+'2fd6a85e-fcfb-4efc-9861-5b18971b09fc/_K6A9999_1+copia+2.jpg',
+      BASE+'95966501-f862-4edd-a1da-72b3f786b177/Suzet1+copia.jpg',
+      BASE+'97bfb9d4-8455-4e90-b602-1fcf4dffef53/_K6A0683-Recuperado.jpg',
+      BASE+'bb0318d8-f47e-4797-8e02-9f3772ef08cc/_K6A0678-Recuperado.jpg',
+      BASE+'d640715d-cdf5-486c-9bd8-d11df2587324/_K6A0692_1+copia.jpg',
+      BASE+'fc7e8e3d-a9c7-48dd-8bde-65a63ad25050/_K6A0680-Recuperado.jpg',
+    ]
+  },
+  {
+    id:'julia-martinez',title:'Julia Martinez',label:'Retrato editorial',
+    cover: BASE+'1705335147726-WLYN1TC98Z1IA6QPCFOY/_K6A0620ffff.jpg',
+    images:[
+      BASE+'dd07760c-fd0f-44d9-9d9a-c8005e206cb1/k6a0611_orig.jpg',
+      BASE+'667625a6-e6dc-4f16-be2e-366ee5e12c35/k6a0641-2_orig.jpg',
+      BASE+'a3f12a05-7052-4823-af3e-d57dcf91bc56/k6a0637_orig.jpg',
+      BASE+'38502dcc-7690-4ff9-8187-fab20e2042f3/k6a0620_orig.jpg',
+      BASE+'98ba9864-6cfd-43e4-8f9f-882ad466c0cf/k6a0618_orig.jpg',
+      BASE+'199fc5e7-e050-4c70-b13c-c949011dd66e/k6a0674_orig.jpg',
+      BASE+'61476540-fb9f-4027-ba10-b5decedb755d/k6a0625_orig.jpg',
+      BASE+'210f40e4-d360-4dd0-b02c-08fe0417fa09/Julia_1.jpg',
+      BASE+'e67a0028-83b1-4ace-bea7-bad2949a2957/Julia_2.jpg',
+      BASE+'4970951a-521e-4e85-a8d0-564375d8ff78/Julia_3.jpg',
+      BASE+'fff5bb6b-8b52-4c15-adc1-97860670d6f8/Julia_4.jpg',
+      BASE+'1601cb47-395c-494f-a206-2b19b36cc26a/Julia_5.jpg',
+      BASE+'136eb882-4816-4ca9-abc4-2fd5e064ea1b/_K6A0760+copia.jpg',
+      BASE+'d5e7a713-7bb7-400b-8669-df25da8bf2f9/_K6A0770+copia.jpg',
+      BASE+'7bbf375d-dc73-4653-b8c1-27d2dc1523d1/_K6A0775+copia.jpg',
+      BASE+'eae14a27-4376-43cc-b7f4-d1f4fac94721/_K6A0787+copia.jpg',
+      BASE+'01b05e8c-55be-48b0-a80f-9d62e4e38c61/_K6A0789+copia.jpg',
+      BASE+'f2a01862-a1cd-40e1-819f-541f348436a3/_K6A0794+copia+%281%29.jpg',
+    ]
+  },
+  {
+    id:'poblenou-antic',title:'Poblenou Antic',label:'Editorial',
+    cover: BASE+'1725441553888-9GKJJUYZ6ZIJVLIW6ST8/_K6A9237+copia.jpg',
+    images:[
+      BASE+'c593f965-b631-40ca-ae7a-634a052e6b16/_K6A8978+copia.jpg',
+      BASE+'6df4e4e5-0901-439c-ac7b-8912fc6352e0/_K6A9237+copia.jpg',
+      BASE+'cd91bb0b-c845-4d91-9f30-ef234a2324a0/_K6A9015+copia.jpg',
+      BASE+'37df0097-ed4b-4a52-af2e-7719526c1b9f/_K6A9084_1+copia.jpg',
+      BASE+'c9641c96-2220-4a4e-951d-af2752781e8b/_K6A9046_1+copia.jpg',
+      BASE+'b45cc976-12e4-4ab3-8539-458734fa8773/_K6A8982+copia.jpg',
+      BASE+'acdfb001-fec9-4428-ad2e-6b0cdabb5198/_K6A9779+copia.jpg',
+      BASE+'d5dcdd02-06d5-4d7a-8fd6-949d74978d16/_K6A9819+copia.jpg',
+      BASE+'47fd05f0-a1aa-48ea-9d47-4ff0d54cdf0e/_K6A9835+copia.jpg',
+      BASE+'e60ac416-f37a-4981-8694-19397f894952/_K6A9798+copia.jpg',
+      BASE+'702f920d-ca95-45de-bf67-67488f5977af/_K6A9848+copia.jpg',
+      BASE+'6fd42ef1-8064-4576-9f20-391833ca9797/_K6A9877+copia.jpg',
+    ]
+  },
+  {
+    id:'the-crazy-side',title:'The Crazy Side!',label:'Editorial',
+    cover: BASE+'1727862096324-JUIZQDBOLPQDU2CYDXQL/sitges+editorial11233.jpg',
+    images:[
+      BASE+'1704387628317-W2F0HFMHA22LVH4V6SWI/revista-p11024-1_orig.jpg',
+      BASE+'1704387628493-ISDQNEOMKJH9VMCZLJZC/sitges-editorial10103_orig.jpg',
+      BASE+'1704387628303-ZBUD2U7NNC4518L3JBVT/sitges-editorial10218_orig.jpg',
+      BASE+'1704387628353-BVBVTFTHZTP55ZUO6HUP/sitges-editorial10296_orig.jpg',
+      BASE+'1704387628507-TLCAII68XRDCSK8AZCID/sitges-editorial10454_orig.jpg',
+      BASE+'1704387628310-NGYF7PTX24IF2VLV926Y/sitges-editorial10455_orig.jpg',
+      BASE+'1704387628362-L3EID4Y8ZBERBO49448Z/sitges-editorial10497_orig.jpg',
+      BASE+'1704387628466-LJ2ZYIEF5IA817XWC28U/sitges-editorial10512_orig.jpg',
+      BASE+'1704387628296-1WLJNEZNANV1RRZ3QQ6M/sitges-editorial10567_orig.jpg',
+      BASE+'1704387628369-CF6CROY8ZOYP31381JK4/sitges-editorial10665_orig.jpg',
+      BASE+'1704387628472-YB908B5WHACNOUR1D49M/sitges-editorial10719_orig.jpg',
+      BASE+'1704387628401-Z87PKQCJMAVV58AM0M79/sitges-editorial10755_orig.jpg',
+      BASE+'1704387628333-RXJUBUNUVMV13544PHT8/sitges-editorial10781_orig.jpg',
+      BASE+'1704387628427-8H0MBIDJ8MADCENE3FVY/sitges-editorial10825_orig.jpg',
+      BASE+'1704387628347-VD9UQH60QRCSSNKNDVU0/sitges-editorial10902-1_orig.jpg',
+      BASE+'1704387628325-P7MLPG312FP55NMCBHQN/sitges-editorial11010_orig.jpg',
+      BASE+'1704387628484-KEFYDO1E6QHDSPDRFCLH/sitges-editorial11055_orig.jpg',
+      BASE+'1704387628513-WU18WV9H982XUCRHGRLV/sitges-editorial11060_orig.jpg',
+      BASE+'1704387628410-M2VTXY3TKT0V41BMFGRN/sitges-editorial11148_orig.jpg',
+      BASE+'1704387628501-0CQXWEZBE1TKV5S5RRRE/sitges-editorial11155_orig.jpg',
+      BASE+'1704387628340-Q0MAS942FEJVLR8R8ROM/sitges-editorial11233_orig.jpg',
+      BASE+'1704387628416-JEDZSQQJB1SSHK4AFHAM/sitges-editorial11259_orig.jpg',
+    ]
+  },
+  {
+    id:'lemon-magazine',title:'Lemon Magazine',label:'Editorial — Vídeo',
+    cover: BASE+'1704387628115-WLFIEMPUH6OJF515C3RV/sitges_orig.jpg',
+    video: '796330125',
+    images:[]
+  },
+  {
+    id:'hazzys-kids',title:'Hazzys Kids',label:'Lookbook infantil',
+    cover: BASE+'1727947874699-7JFCQONI01GNPI6ABP62/mg-8335_orig.jpg',
+    images:[
+      BASE+'1704387654850-TWJ6WIL7F2HZ17Z6EMQS/mg-6850_orig.jpg',
+      BASE+'1704387654841-8GBVCVSXS7OUHCY7EPED/mg-7238_orig.jpg',
+      BASE+'1704387654858-JTYGLE9R0KEDO2O7HTIC/mg-7132_orig.jpg',
+      BASE+'1704387654835-O4T2V6NNP7USFJ32K28R/mg-7199_orig.jpg',
+      BASE+'1704387654881-F9G5QSV642E7BOVCTXCO/mg-7752_orig.jpg',
+      BASE+'1704387654872-MI0J4JWQLCU5TVTT9K07/mg-7786_orig.jpg',
+      BASE+'1704387654900-EAZPLTSZVF0C5XZFL6LY/mg-8066_orig.jpg',
+      BASE+'1704387654865-A6G9O7XN14LIRJLLKMC5/mg-8221_orig.jpg',
+      BASE+'1704387654906-KFDX7C36CN845O6YVUQ6/mg-8267_orig.jpg',
+      BASE+'1704387654913-ESDF37FSY2UKOZYURSVF/mg-8335_orig.jpg',
+      BASE+'1704387654894-6G81KVRQJPN0GIKCYNTU/mg-8342_orig.jpg',
+      BASE+'1704387654887-SA5D6E11G2GM8G1OR718/mg-7124_orig.jpg',
+      BASE+'1704387654935-IQ8BCQSCLVUB7Y3237F5/hazzys-kids-1_1.jpg',
+      BASE+'1704387654996-70Q0163YPG8JNTQX0TDC/hazzys-kids-2_1.jpg',
+      BASE+'1704387654918-J9LNUUZM5IJAT6H7TR4Z/hazzys-kids-3_1.jpg',
+      BASE+'1704387654928-23GMN0KPMQ86ZVG02MEP/hazzys-kids-4_1.jpg',
+      BASE+'1704387654944-2VG19S9YHE1J7WJVIEI9/hazzys-kids-5_1.jpg',
+      BASE+'1704387654965-YCVCKSVF5EBO0FRBDX3S/hazzys-kids-6_1.jpg',
+      BASE+'1704387655003-AFOMY03XN24F46BGU5YV/hazzys-kids-7_1.jpg',
+      BASE+'1704387654973-VFV71EQBM28SHMIISET5/hazzys-kids-8_1.jpg',
+      BASE+'1704387654951-AMDSJ2G31EQ90O4GCRYB/hazzys-kids-9_1.jpg',
+      BASE+'1704387654982-TSDTKV76DAYIO61XJHQT/hazzys-kids-10_1.jpg',
+      BASE+'1704387654988-49NKEMYQ16BY0NFG3PJK/hazzys-kids-11_1.jpg',
+      BASE+'1704387654959-0EH45NIN9Y279DCOC0MH/hazzys-kids-12_1.jpg',
+    ]
+  },
+  {
+    id:'lucky-try',title:'Lucky Try',label:'Campaña — Vídeo',
+    cover: BASE+'1727948091452-5UGDOW1008U33VTVIMVF/cuadro-luckytry_8.jpg',
+    videos: ['1199789896','807411216'],
+    images:[]
+  },
+  {
+    id:'valentina-bentos',title:'Valentina Bentos',label:'Editorial de moda',
+    cover: BASE+'1704703555067-ITZR50URKBBQ9R2Q1BHF/Valentina+Bentos_%40photoeloi+%282%29.jpg',
+    images:[
+      BASE+'57a0ea18-00b2-4d40-8da2-5c8bd0787745/_K6A3933.jpg',
+      BASE+'ec5afaab-733e-4dae-9cf9-758c9aeaaaeb/Valentina+Bentos_%40photoeloi+%2811%29.jpg',
+      BASE+'9dbeda6e-bf49-4db6-9dcf-429b579c939f/_K6A3977.jpg',
+      BASE+'cca5a7e6-6b50-45b8-994a-32dd59d04526/_K6A4085.jpg',
+      BASE+'1bcdd1cb-070f-403a-92c2-89e9ff4eb120/Valentina+Bentos_%40photoeloi+%281%29.jpg',
+      BASE+'5120ec0e-8006-4352-af2b-5816196fc6ea/Valentina+Bentos_%40photoeloi+%282%29.jpg',
+      BASE+'ba4dccb3-8cf5-48bc-be01-3547df5d3ae4/Valentina+Bentos_%40photoeloi+%283%29.jpg',
+      BASE+'b50a0592-a7fc-4d8b-b582-26738b29d7c5/Valentina+Bentos_%40photoeloi+%2816%29.jpg',
+      BASE+'07636981-1bfa-4a41-ab9c-68c67d598797/Valentina+Bentos_%40photoeloi+%2817%29.jpg',
+      BASE+'df436f37-0d40-41a3-88aa-bc0bcdf62b63/Valentina+Bentos_%40photoeloi+%2817%29.jpg',
+      BASE+'85f1faa0-21c5-45cf-a306-a093a7d751bf/Valentina+Bentos_%40photoeloi+%285%29.jpg',
+      BASE+'3d3814b8-616a-4e8b-8709-320e37a4c443/Valentina+Bentos_%40photoeloi+%286%29.jpg',
+      BASE+'beefc03b-4d8b-481c-a9dd-7a6860b78b5f/Valentina+Bentos_%40photoeloi+%287%29.jpg',
+      BASE+'8471f652-6126-4486-a787-7a822176db79/Valentina+Bentos_%40photoeloi+%288%29.jpg',
+      BASE+'72f6411d-11d3-4cbd-8db0-d79a10338bcf/Valentina+Bentos_%40photoeloi+%289%29.jpg',
+      BASE+'462b5f26-6aa4-4a29-b5b2-7a6744532632/Valentina+Bentos_%40photoeloi+%2810%29.jpg',
+      BASE+'0d518ecc-9036-4825-83e5-bab773556f0f/Valentina+Bentos_%40photoeloi+%2812%29.jpg',
+      BASE+'8caa4b16-92a3-45fe-b669-059322775eee/Valentina+Bentos_%40photoeloi+%284%29.jpg',
+      BASE+'c0fee38c-c47d-4f14-9401-18d24d956ff7/_K6A4208.jpg',
+      BASE+'a69cd3bd-3fcf-4ac8-8315-d65af41871b4/_K6A4211.jpg',
+      BASE+'c16fa103-6ff0-442e-b9c1-d77f9a33f199/_K6A4217.jpg',
+      BASE+'bedffc42-d794-4218-be7b-3d028f9768c5/_K6A4224.jpg',
+    ]
+  },
+  {
+    id:'my-little-pony',title:'My Little Pony by Thuya',label:'Editorial',
+    cover: BASE+'1704387627841-1HVJZQYEU3W1F8S11Z65/thuya-photoeloi-17-orig_orig.jpg',
+    images:[
+      BASE+'1704387627757-2DHE3E3BECFATZMD3JOP/thuya-photoeloi-17_orig.jpg',
+      BASE+'1704387627763-R36IMKKY0TS8S49PGAEG/thuya-photoeloi-1_orig.jpg',
+      BASE+'1704387627815-W7FT3YMSQ9JO49VSSUFA/thuya-photoeloi-10_orig.jpg',
+      BASE+'1704387627797-7NCW9DGJ6U85N1KCI0XR/thuya-photoeloi-5_orig.jpg',
+      BASE+'1704387627726-ACE5UGN52LL973O4CB4T/thuya-photoeloi-12_orig.jpg',
+      BASE+'1704387627808-D6VJHVBYBGEAXQDPL3C0/thuya-photoeloi-14_orig.jpg',
+      BASE+'1704387627740-5TZCBONE1PBJ1M2W7C8A/thuya-photoeloi-3_orig.jpg',
+      BASE+'1704387627825-TREUEO06MKSDJNU1RXJ2/thuya-photoeloi-8_orig.jpg',
+      BASE+'1704387627718-ZTLK56HEZG64BNECSX95/thuya-photoeloi-4_orig.jpg',
+      BASE+'1704387627783-QHP0HQM4CZQVDAYU06X0/thuya-photoeloi-11_orig.jpg',
+      BASE+'1704387627776-RHYZ4UNN1QFV01TU6U0M/thuya-photoeloi-19_orig.jpg',
+      BASE+'1704387627733-BMJ2ZPEMTENIK8PANQAW/thuya-photoeloi-18_orig.jpg',
+      BASE+'1704387627770-2EPFSNNRRFYMJYK5IRMD/thuya-photoeloi-9_orig.jpg',
+      BASE+'1704387627802-J85QXQUS6BK4DXO4L07O/thuya-photoeloi-13_orig.jpg',
+      BASE+'1704387627790-AX2IYOGF06EZMRVSRQQB/thuya-photoeloi-2_orig.jpg',
+      BASE+'1704387627751-KN7431OD7K0PB3WOEG5Y/thuya-photoeloi-6_orig.jpg',
+    ]
+  },
+  {
+    id:'exotica-gin',title:'Exotica Gin',label:'Campaña publicitaria',
+    cover: BASE+'53cbdaa2-d18a-479e-b672-1d724533844c/Exotica10.jpg',
+    images:[
+      BASE+'53e52987-5456-4e0e-a38a-f348b5290cf5/Exotica.jpg',
+      BASE+'ad776cb1-fb5c-494c-8f0d-1ed14c7bee72/Exotica2.jpg',
+      BASE+'27c2d553-02bc-427a-9081-6ca4f3a42656/Exotica3.jpg',
+      BASE+'3038c646-5dbc-497b-8495-c7720af30642/Exotica4.jpg',
+      BASE+'26f31f04-2faf-435e-ab15-51274a538c51/Exotica5.jpg',
+      BASE+'74d39ab8-fb0b-4d18-960a-318a2d40bd50/Exotica6.jpg',
+      BASE+'406b1164-7aec-43a0-b8f8-a93b09e66558/Exotica7.jpg',
+      BASE+'c81610ee-45b9-44dc-8243-ab95cea4884e/Exotica8.jpg',
+      BASE+'f5576782-aa39-4515-aa5f-18a0eb0a81ff/Exotica9.jpg',
+      BASE+'63cf9b64-781c-464d-a3be-ebec57647d5c/Exotica10.jpg',
+    ]
+  },
+  {
+    id:'vip-picnic',title:'Vip.Picnic',label:'Evento',
+    cover: BASE+'1727948496604-P16CU718FI1T3GQFS6KW/mg-0877_orig.jpg',
+    images:[
+      BASE+'1704387656392-I03ZC1KI200U0Z158703/mg-0488_orig.jpg',
+      BASE+'1704387656341-IBAJ3UMCAZC4DZB1SICS/mg-0557_orig.jpg',
+      BASE+'1704387656367-ZFI6MKXH96MVSZ7BZE26/mg-0693_orig.jpg',
+      BASE+'1704387656352-NFUTWAP3HANY81TZ4W84/mg-0757_orig.jpg',
+      BASE+'1704387656412-AS3M9HS0RVA6JJDSLKS2/mg-0784_orig.jpg',
+      BASE+'1704387656358-7ZWTOW16I74SEWBVEPKB/mg-0805_orig.jpg',
+      BASE+'1704387656379-LF79WRDX7R2XYS25CTFW/mg-0813_orig.jpg',
+      BASE+'1704387656386-HR428HJ0LMAG2TAY7UII/mg-0816_orig.jpg',
+      BASE+'1704387656418-894IDBH8SHN5R48RWBFJ/mg-0855_orig.jpg',
+      BASE+'1704387656398-YAPGGM903UHIAS88FB7H/mg-0865_orig.jpg',
+      BASE+'1704387656406-IMG3BRTLAVKB937PYD3E/mg-0877_orig.jpg',
+      BASE+'1704387656373-XZ8R6D60QS4G50ECL297/mg-1018_orig.jpg',
+      BASE+'1704387656450-UYRVK6Z6NZWGR0ZMSVAC/mg-1046_orig.jpg',
+      BASE+'1704387656430-8U788CJ4SUR1YH5UXNJV/mg-1216_orig.jpg',
+      BASE+'1704387656424-1LUUTL7RFZDLQ8XP1O4J/mg-1224_orig.jpg',
+      BASE+'1704387656442-NY0ZBQFW0CAS6RZO6V2I/mg-1231_orig.jpg',
+      BASE+'1704387656436-RBR5O1ELC0T0GNXTOS1Z/mg-1312_orig.jpg',
+      BASE+'1704387656463-FHIT7L8WKP7UHCZHISIM/mg-1366_orig.jpg',
+      BASE+'1704387656456-EW1QZDBIBINZVQKRVK60/mg-1408_orig.jpg',
+    ]
+  },
+  {
+    id:'glenis',title:'Glenis Swimwear',label:'Nueva colección',
+    cover: BASE+'1727948663963-V162XG21DIOQ8KMUVN49/glenis-swimwear-6_orig.jpg',
+    images:[
+      BASE+'1704387655070-NVPI27YQEPLNZHA1GSNB/glenis-swimwear-1_orig.jpg',
+      BASE+'1704387655085-CQOBDBF9RF411EPLX7F4/glenis-swimwear-6_orig.jpg',
+      BASE+'1704387655209-17ZOMRJX7LLYMW4SJN9V/glenis-swimwear-12_orig.jpg',
+      BASE+'1704387655079-8OU9Y1Y4II9X5UXWFMNW/anna1_orig.jpg',
+      BASE+'1704387655064-DVI0W3G7MXJ7GFUPUCN4/glenis-swimwear-3_orig.jpg',
+      BASE+'1704387655103-ZDQT8R8IW03I383RXEUE/glenis-swimwear-2_orig.jpg',
+      BASE+'1704387655155-XDTRTISWV6K4P1RQT16C/glenis-swimwear-7_orig.jpg',
+      BASE+'1704387655140-CFPJ3F3SHN1AGB8LH0XM/glenis-swimwear-14_orig.jpg',
+      BASE+'1704387655134-E7EV08P8C6BC1NPJE6IQ/anna2_orig.jpg',
+      BASE+'1704387655097-6T1RR6HQWSK6EEQUF27F/glenis-swimwear-4_orig.jpg',
+      BASE+'1704387655147-V9VSFK9SQTYNXJ7UZX76/anna3_orig.jpg',
+      BASE+'1704387655203-EZVR5S0JNJX78BXM329E/glenis-swimwear-10_orig.jpg',
+      BASE+'1704387655188-GR7I05I0LJC21YD170T6/glenis-swimwear-5_orig.jpg',
+      BASE+'1704387655119-OJAU6KRM7GTVGQL1OSUJ/glenis-swimwear-8_orig.jpg',
+      BASE+'1704387655112-YSOAXQRA8ZDGUOYHDBFD/glenis-swimwear-9_orig.jpg',
+      BASE+'1704387655128-C335SOLRRW6V01756KRY/glenis-swimwear-11_orig.jpg',
+      BASE+'1704387655164-SYJ88JHCO97TVZXO1UGJ/glenis-swimwear-13_orig.jpg',
+      BASE+'1704387655091-LHHYZEYKHO75HXP27C6Y/glenis-swimwear-15_orig.jpg',
+      BASE+'1704387655197-8NSNZS8KNSOSGWNFNHVR/glenis-swimwear-16_orig.jpg',
+      BASE+'1704387655263-MJ1WS9GUUUGYT6PZOHL5/k6a0952_orig.jpg',
+      BASE+'1704387655170-4Y1NDU7MJUF98KXEI0E2/k6a0995_orig.jpg',
+      BASE+'1704387655180-MKDO5N3G25PG6JLJ5P0O/k6a1006-1_orig.jpg',
+      BASE+'1704387655249-MWA8GAWJDQFBTTU3YRZ8/k6a1009_orig.jpg',
+      BASE+'1704387655219-FRC4Z24UGESRV678UQ58/k6a1056_orig.jpg',
+      BASE+'1704387655227-BJIE2123DN92AQ5G2YLG/k6a1215_orig.jpg',
+      BASE+'1704387655240-J5VK3B83IBG81EDNKKPL/k6a1238_orig.jpg',
+      BASE+'1704387655257-KSK3A0BLWMSRRMGIZ3FX/k6a1409_orig.jpg',
+      BASE+'1704387655234-5YCK7Q7COTRRP6IT8AFK/k6a1415_orig.jpg',
+      BASE+'1704387655270-IY792SNAEK6WHSMGBYZC/k6a1446_orig.jpg',
+    ]
+  },
+  {
+    id:'martina-pavia',title:'Martina Pavia',label:'Fotografía de marca',
+    cover: BASE+'1727948211601-64AFHI8DCXAWT7DBRYL2/martina-pavia-martinapavia-4_orig.jpg',
+    images:[
+      BASE+'1704387655409-5OB462PCZUZYUM2CM8VI/k6a6240-1_orig.jpg',
+      BASE+'1704387655416-GLC70PZFSU2W6016SMTT/martina-pavia-martinapavia-2_orig.jpg',
+      BASE+'1704387655391-4FVZYIGG4PPH8GD2MC2Y/k6a6231-1_orig.jpg',
+      BASE+'1704387655436-85JU813VGH5YJD9LHHC2/k6a6286-1_orig.jpg',
+      BASE+'1704387655302-JG19DO2UPCA6AYAGWNIE/k6a6135_orig.jpg',
+      BASE+'1704387655444-NIVUIMG84YMBWM75MNCM/martina-pavia-martinapavia-5_orig.jpg',
+      BASE+'1704387655454-RD8C5IINXU8FCGAVC7ZX/martina-pavia-martinapavia-1_orig.jpg',
+      BASE+'1704387655319-J6Z7JN38YSHI99BL9QU9/martina-pavia-martinapavia-6_orig.jpg',
+      BASE+'1704387655426-VOM79X482BJ86DTDH2MN/martina-pavia-martinapavia-3_orig.jpg',
+      BASE+'1704387655400-H40RB4MP80L508F9V2IK/martina-pavia-martinapavia-9_orig.jpg',
+      BASE+'1704387655308-X5RCO50Z26OB9CV294ES/martina-pavia-martinapavia-4_orig.jpg',
+      BASE+'1704387655462-QKEUL49OPTLT4MQOWRZD/martina-pavia-martinapavia-10_orig.jpg',
+    ]
+  },
+  {
+    id:'fete-barcelona',title:'Fete Barcelona',label:'Campaña',
+    cover: 'https://res.cloudinary.com/dmajnty6m/image/upload/q_auto/f_auto/v1781021939/_K6A5237_ep80f0.jpg',
+    images:['https://res.cloudinary.com/dmajnty6m/image/upload/q_auto/f_auto/v1781021939/_K6A5237_ep80f0.jpg','https://res.cloudinary.com/dmajnty6m/image/upload/q_auto/f_auto/v1781021963/_K6A5025_07_it7jtv.jpg','https://res.cloudinary.com/dmajnty6m/image/upload/q_auto/f_auto/v1781021941/_K6A4720_at8ij8.jpg','https://res.cloudinary.com/dmajnty6m/image/upload/q_auto/f_auto/v1781021939/_K6A5356_fym1ay.jpg','https://res.cloudinary.com/dmajnty6m/image/upload/q_auto/f_auto/v1781021939/_K6A4775_gslwmh.jpg','https://res.cloudinary.com/dmajnty6m/image/upload/q_auto/f_auto/v1781021939/_K6A3200_duz8uv.jpg','https://res.cloudinary.com/dmajnty6m/image/upload/q_auto/f_auto/v1781021963/_K6A5025_04_nhwfyq.jpg','https://res.cloudinary.com/dmajnty6m/image/upload/q_auto/f_auto/v1781021963/_K6A5025_03_qntrtl.jpg','https://res.cloudinary.com/dmajnty6m/image/upload/q_auto/f_auto/v1781021963/_K6A5025_08_n2stmo.jpg','https://res.cloudinary.com/dmajnty6m/image/upload/q_auto/f_auto/v1781021964/_K6A5025_05_iw1xaj.jpg','https://res.cloudinary.com/dmajnty6m/image/upload/q_auto/f_auto/v1781021964/_K6A5025_06_agafol.jpg']
+  },
+  {
+    id:'was-swimwear',title:'WAS Swimwear',label:'Nueva colección',
+    cover: BASE+'1727948879764-GRHZOO75BYTV29U1W32U/mg-0409-orig_orig.jpg',
+    images:[
+      BASE+'1704387654671-4JXF348TI5QM4KTFLLUR/1657537082027-orig_orig.jpg',
+      BASE+'1704387654653-PEVATKVFI5GP6OP12MYZ/mg-0308-orig_orig.jpg',
+      BASE+'1704387654757-ANLUL3W1HRY3UEP6GJBO/mg-0560-orig_orig.jpg',
+      BASE+'1704387654659-T7Z310X353O5AYGZCOAN/1657537082059-orig_orig.jpg',
+      BASE+'1704387654723-9T4BLIRBYBM88N3T7141/laiawas3-orig_2+%281%29.jpg',
+      BASE+'1704387654665-8NP726VGH1LEU65OI5AL/1657537082042-orig_orig.jpg',
+      BASE+'1704387654691-2NXUR90Q428XMP9VQRVG/mg-0409-orig_orig.jpg',
+      BASE+'1704387654684-DAYP68OH26GLXJQQAFWT/mg-0450-orig_orig.jpg',
+      BASE+'1704387654771-1A0ADKKRGVFA4URC8ZZJ/mg-0512-retocada-orig_orig.jpg',
+      BASE+'1704387654698-NVPFCBQ6AOSTY6365DEI/mg-0579-orig_orig.jpg',
+      BASE+'1704387654677-4ZUXIMDP9AVPNK0PXLHZ/mg-0656-orig_orig.jpg',
+      BASE+'1704387654730-10XTXFGD4XU65H8BQV0I/mg-1180-orig_2.jpg',
+      BASE+'1704387654791-DUHMJBPHE1I6ZBCFE470/mg-1220-orig_2.jpg',
+      BASE+'1704387654736-GMXI5ZFHM33FQFTFHHJF/mg-1239-orig_2.jpg',
+      BASE+'1704387654704-JPFMZ141OWIYT5VD42O0/mg-1341-orig_orig.jpg',
+      BASE+'1704387654785-CL8ARAYRDNHVEP3Y7122/mg-1556-orig_orig.jpg',
+      BASE+'1704387654743-E7HH5XKKJZXGGTYER13X/mg-1845h-orig_orig.jpg',
+      BASE+'1704387654711-65QJKHZEFHAIK7Q1JE19/mg-1895-orig_2.jpg',
+      BASE+'1704387654750-8LML4WM3FSQF72E046ST/mg-1912-orig_2.jpg',
+      BASE+'1704387654779-Z5R573G78RWSLQQE3S49/mg-1980-orig_2.jpg',
+      BASE+'1704387654806-0FUOYCR9M9N9J5AMFV6O/mg-1988-orig_2.jpg',
+      BASE+'1704387654765-JFBEBZCNABQYFK6K4S0C/mg-1992-orig_2.jpg',
+      BASE+'1704387654798-5GI0HCDL6YCKTX70DNSD/wasswimwear_orig.jpg',
+    ]
+  },
+  {
+    id:'billy-elliot',title:'Billy Elliot',label:'Editorial',
+    cover: BASE+'1704706748232-17ACJEFL3AW1JT1YTB5Q/k6a4165_orig.jpg',
+    images:[
+      BASE+'97f4b572-903a-4f21-a0e0-8627767b82a0/k6a3652_orig.jpg',
+      BASE+'152ee02a-943b-4de8-81af-1292032cfc80/k6a3667_orig.jpg',
+      BASE+'1619fe3d-af58-40f9-acd9-f2afaf508616/k6a3701_orig.jpg',
+      BASE+'9892b2ef-a25d-4fa4-87c6-5445f1de9826/k6a3713-1_orig.jpg',
+      BASE+'90bcc775-6059-4f39-99f8-d893754842bb/k6a3726_orig.jpg',
+      BASE+'3dccf7a8-95ba-4fa3-9b09-1a20f137cb16/k6a3769_orig.jpg',
+      BASE+'62698997-b1df-4c0f-8daf-7c822d3dfc55/k6a3770_orig.jpg',
+      BASE+'0ff56e51-f329-4b20-8dd0-8e4aabfad53e/k6a3783_orig.jpg',
+      BASE+'d35d7cee-0cfa-45c3-85c7-d1d3c1d4043e/k6a3799_orig.jpg',
+      BASE+'7b6a39b8-b200-49cf-8a29-6ba0eb251505/k6a3883_orig.jpg',
+      BASE+'a8bddc6e-6c08-46d2-8e30-85dd090c5e40/k6a3921_orig.jpg',
+      BASE+'991170ba-c367-4ba6-a02d-0dfd1fbc59c7/k6a3984_orig.jpg',
+      BASE+'22b8bad1-7d2e-421a-884d-4a53a6e5ad56/k6a3997_orig.jpg',
+      BASE+'a28fe942-93cd-4300-af02-dfdd49870bd1/k6a4036_orig.jpg',
+      BASE+'98c19622-59ce-4291-aaf5-a78eb47c2278/k6a4048-1_orig.jpg',
+      BASE+'02725685-087d-4dc6-8a06-fc6337e71c42/k6a4052_orig.jpg',
+      BASE+'08b160ac-7062-4706-8c26-d795cac63a4e/k6a4055_orig.jpg',
+      BASE+'40a3e051-a2d7-476e-a4b4-0b68b20ef044/k6a4067_orig.jpg',
+      BASE+'18edb2e2-feda-46b8-b0b9-edc852ece2fd/k6a4095_orig.jpg',
+      BASE+'b874c607-3b5f-45d3-9af9-9d1a3a418b50/k6a4103_orig.jpg',
+      BASE+'490c63a2-6876-46c8-b8ca-d14d6b1a5387/k6a4151_orig.jpg',
+      BASE+'791a056c-0fa7-4a36-8ca1-4b429fef14c7/k6a4154_orig.jpg',
+      BASE+'6e4f79e8-eab5-4099-81d5-e5078cf4c823/k6a4163_orig.jpg',
+      BASE+'873d5aeb-d0e1-42ab-ad9d-f556187f54c0/k6a4165_orig.jpg',
+      BASE+'e94f4e0d-01e5-40ea-b365-e49abce6c061/k6a4182_orig.jpg',
+      BASE+'b24a0155-d09e-4432-bb1b-11c08ec7ff6b/k6a4305_orig.jpg',
+      BASE+'8e169606-c77e-4144-87e3-00e295baba43/k6a4374_orig.jpg',
+      BASE+'e95b9593-bcc9-4a98-94e8-3720563cbae6/k6a4413_orig.jpg',
+    ]
+  },
+  {
+    id:'arma-de-mujer',title:'Arma de Mujer',label:'Editorial',
+    cover: BASE+'1704387628673-QYES9PR7ZEDL83L6CXUC/arma-de-mujer11401-orig_orig.jpg',
+    images:[
+      BASE+'1704387628606-2J1QOXY0T5NUS0BYF56V/arma-de-mujer11377_orig.jpg',
+      BASE+'1704387628544-LLNXQ3LKYC9WH5PFG0QP/arma-de-mujer11401_orig.jpg',
+      BASE+'1704387628582-IOE2XMZF0DGY8U7TKH8J/arma-de-mujer11413_orig.jpg',
+      BASE+'1704387628550-A6XVFXN7TSNDHJLPSSQD/photoeloi-1_orig.jpg',
+      BASE+'1704387628614-Z0W5CNTF58CCHM32W1YW/photoeloi-2_orig.jpg',
+      BASE+'1704387628566-Y4JYHPWURGQV4MRBK3EZ/photoeloi-3_orig.jpg',
+      BASE+'1704387628627-LY34MO0ZKL90SFZ27KEL/photoeloi-armademujer_orig.jpg',
+      BASE+'1704387628641-50OXQZ2OOCN2IL93LEJ8/photoeloi-armademujer-28-2_orig.jpg',
+      BASE+'1704387628620-WE4THR7AZ2R3W4Z1LI6K/photoeloi-armademujer-43-1_orig.jpg',
+      BASE+'1704387628634-ROCT3VGVAJ4QJU8ZO3NV/photoeloi-armademujer-127-recuperado_orig.jpg',
+      BASE+'1704387628556-EU0D4E7RXNURK6KNXCTR/photoeloi-armademujer-321_orig.jpg',
+      BASE+'1704387628649-1JMKX5FLM6AH0J5WNUAK/photoeloi-armademujer-332_orig.jpg',
+      BASE+'1704387628600-C0K2X2YXLVIBFWTO2YD1/photoeloi-armademujer-359_orig.jpg',
+      BASE+'1704387628593-LD2ZZGASH33A38GFOFOR/photoeloi-armademujerr_orig.jpg',
+      BASE+'1704387628575-QO5EWU4XNU7XI9Z7WU11/photoeloi-armademujers_orig.jpg',
+    ]
+  },
+  {
+    id:'princess-bikinis',title:'Princess Bikinis',label:'Nueva colección',
+    cover: BASE+'1727948402052-PM6IWSSVM9LYQW51WF9Y/mg-8867_orig.jpg',
+    images:[
+      BASE+'d3ecd617-8640-4794-b8ca-7f6e88c29eae/mg-3975-orig_4.jpg',
+      BASE+'0cd0cc57-8520-4b45-a094-db12f95e8cac/mg-9147_orig.jpg',
+      BASE+'5a0d554d-fc4a-43f8-addc-7c9fd5649292/mg-8984_orig.jpg',
+      BASE+'8faba061-4de2-487e-af00-ef6a804ea728/mg-8880_orig.jpg',
+      BASE+'7335151f-6a3c-4c24-bfe5-9928d53b64a0/mg-3606-orig_4.jpg',
+      BASE+'140aed40-379f-4d59-a284-fe13e862faa9/mg-8828_orig.jpg',
+      BASE+'2d29fe76-33b4-4654-9a79-1961dc70f480/mg-3735-orig_4.jpg',
+      BASE+'7b5bcb27-3d5c-4f6f-b218-9e05842a43f9/mg-8773_orig.jpg',
+      BASE+'e5af77f8-f2cc-401b-8ec8-d89634f40de6/mg-9092_orig.jpg',
+      BASE+'cf3baa84-feed-44a4-bf9d-2393cf7909c1/mg-3703-orig_4.jpg',
+      BASE+'a81f33c6-f314-4184-bfda-b32db5b3bfd8/mg-8793_orig.jpg',
+      BASE+'13336ad7-1496-481e-bdc8-02a5a7598e0c/mg-8867_orig.jpg',
+      BASE+'95834d89-4731-4c44-b9a8-7bd14e8f115e/mg-8994_orig.jpg',
+      BASE+'0a63c8a0-5e7d-413e-a10a-a915e6666b4d/mg-9010_orig.jpg',
+      BASE+'dd317054-2be3-43a7-923a-333513f1f336/mg-9085_orig.jpg',
+      BASE+'38335696-c669-430f-9289-557a97542b59/mg-9128_orig.jpg',
+      BASE+'2ee21bac-4979-4561-94e8-f132e49370bb/mg-9153_orig.jpg',
+      BASE+'0da14d1a-fb4f-4a5d-8666-04188c92a5aa/mg-8799_orig.jpg',
+      BASE+'ee9b99a1-e37e-40e4-afe3-3e336c59ecbd/mg-9362-orig_2.jpg',
+    ]
+  },
+  {
+    id:'new-year-party',title:'New Year Party',label:'Editorial',
+    cover: BASE+'1704387627701-EPJ0QKNGPU89KAK31WDK/mg-3491-orig_orig.jpg',
+    images:[
+      BASE+'1704387627660-5AO7FZ8PPCTEV4WURG4C/mg-3535-copia_orig.jpg',
+      BASE+'1704387627596-E1FC6PSX3WO0OPCW9NLQ/mg-2048_orig.jpg',
+      BASE+'1704387627562-D1GGT25NRFQP3Q64O4FS/mg-2104_orig.jpg',
+      BASE+'1704387627629-ATAHLZ9A2DYC8H63AN88/mg-2178_orig.jpg',
+      BASE+'1704387627666-N5VFD7M482NCIL2VIOG0/mg-2179_orig.jpg',
+      BASE+'1704387627533-KB7FOXOR3VVNILM14YVC/mg-2200_orig.jpg',
+      BASE+'1704387627635-HZSV48BHIZVSKKD1S6DD/mg-2210_orig.jpg',
+      BASE+'1704387627589-AJNJOB0P3ZF2U4UK50DX/mg-2486_orig.jpg',
+      BASE+'1704387627556-CN25ZXOVFIULUSYZ4PNB/mg-2529_orig.jpg',
+      BASE+'1704387627602-6TVJ38FCYEX8NFXLFCBD/mg-2535_orig.jpg',
+      BASE+'1704387627643-8OOFDPZODJ156G1FOA0G/mg-2669_orig.jpg',
+      BASE+'1704387627582-6CZUXTXJN6TYW2QDLHYF/mg-2777_orig.jpg',
+      BASE+'1704387627608-ZGLYTHDQ5VOQIQU9WCCV/mg-2906_orig.jpg',
+      BASE+'1704387627549-MQQPZ7192F30VKH7E08D/mg-3001_orig.jpg',
+      BASE+'1704387627676-TFZ6F04BTJUCULJ63LOS/mg-3360_orig.jpg',
+      BASE+'1704387627623-HP591QDI70PWV5J25T1Y/mg-3491_orig.jpg',
+      BASE+'1704387627569-ZJI6D737ZNX137QPFYPB/mg-3566-copia_orig.jpg',
+      BASE+'1704387627653-JMZFIDWO6CARWK08SYZR/mg-3624-copia_orig.jpg',
+      BASE+'1704387627576-HX8X9VW0209C0JXHET7U/mg-3638-copia_orig.jpg',
+    ]
+  },
+  {
+    id:'introspective-journey',title:'An Introspective Journey',label:'Fine Art',
+    cover: BASE+'1704387628092-H6XACTTPU4UBJRT9GHKQ/mg-5865-orig_orig.jpg',
+    images:[
+      BASE+'1704387627987-1VMY31VAZ91VTV4EN12I/valentina-carre-o-bazurto-6famk003c-cwk2-page-0001_orig.jpg',
+      BASE+'1704387628064-1GRVRI2J2G5JSQMFCL9A/mg-5724_orig.jpg',
+      BASE+'1704387628014-4YXBKN9LQ176YRRHWTZ4/mg-5730_orig.jpg',
+      BASE+'1704387627973-O3F5A5SMLJP9JF8OXQD0/mg-5734_orig.jpg',
+      BASE+'1704387627993-IPSIA82G8FDB8CJAHVEV/mg-5865_orig.jpg',
+      BASE+'1704387628039-0ML01JAZWYC0DC879CY8/mg-5907_orig.jpg',
+      BASE+'1704387628071-VT32FAKU9I10O2TPOEJG/mg-5921_orig.jpg',
+      BASE+'1704387627981-T23T64AUGPBNPPCCSIYW/mg-6046_orig.jpg',
+      BASE+'1704387627958-3WXADAW29B9PSG56QNPC/mg-6066_orig.jpg',
+      BASE+'1704387628032-K7P9WCGF0LOXEZ1MVUC5/mg-6111_orig.jpg',
+      BASE+'1704387628050-J2N7KHS53LWKNM6VP5YL/mg-6147_orig.jpg',
+      BASE+'1704387628001-3176TFYYXMQA2TNKHCN4/mg-6183_orig.jpg',
+      BASE+'1704387628007-6BPAEH2VSO3UMM245DJ9/mg-6245_orig.jpg',
+      BASE+'1704387627966-ITQGIGEWSFFSWM7BRF6P/mg-6251_orig.jpg',
+      BASE+'1704387628077-9LCE9Q9IXA3T5973JLHX/mg-6270_orig.jpg',
+      BASE+'1704387628027-P1C0NB7F3R4V5LM483ZZ/mg-6308_orig.jpg',
+    ]
+  },
+  {
+    id:'liz-swimwear',title:'Liz Swimwear · Costa Rica',label:'Lookbook',
+    cover: BASE+'1727948976393-X3QH3UI6LGBX3DKSZX1N/mg-7930-orig_orig.jpg',
+    images:[
+      BASE+'1704387655530-WMP12NV92352IQWC1RDQ/mg-7605-orig_orig.jpg',
+      BASE+'1704387655489-0Y4MCZ93RB6H8O55AZ57/mg-7930-orig_orig.jpg',
+      BASE+'1704387655495-FM0XL2G5IU4XVI3O9YUA/mg-7642-orig_orig.jpg',
+      BASE+'1704387655505-1ZDGNGRP00ZX7DCCMWBB/mg-7645-orig_orig.jpg',
+      BASE+'1704387655517-GKYFKE76U0SI5Y1A7XCO/jarepas4-orig_orig.jpg',
+      BASE+'1704387655538-VHTVUABHKJFH5TI61X82/mg-7982-orig_orig.jpg',
+      BASE+'1704387655511-JPNMS8WWTC16X27C8EYD/mg-7825-orig_orig.jpg',
+      BASE+'1704387655523-WFNK1MKMDJBNJAA7EO0I/mg-7971-orig_orig.jpg',
+    ]
+  },
+  {
+    id:'gianni-versace',title:'Gianni Versace',label:'Retrospectiva — Vídeo',
+    cover: BASE+'ada4bf1f-efd5-42ef-8387-a689f1426bd0/%7B8E3C318E-4ADD-49BF-80B5-C5A1BCCA2D32%7D.png',
+    video: '1101245439',
+    images:[]
+  },
+  {
+    id:'dinner-at-my-house',title:'Dinner at My House',label:'Editorial',
+    cover: BASE+'1704387628281-A1N1SCAVYUTN443VAGA4/mg-1965-orig_orig.jpg',
+    images:[
+      BASE+'1704387628150-3YYR6JWVIXG8IXHA2TYE/mg-1468-2_orig.jpg',
+      BASE+'1704387628164-VD6AW183VI8QTARI4SDT/mg-1477-2_orig.jpg',
+      BASE+'1704387628156-0685SO1KMMQUTCBQCN0Z/mg-1495_orig.jpg',
+      BASE+'1704387628230-G9FFWQX13L152MCJT9AP/mg-1544_orig.jpg',
+      BASE+'1704387628136-D7K63RDH576QFBU6LH2T/mg-1560_orig.jpg',
+      BASE+'1704387628265-4XUJPDVSOVMRX7UHPE23/mg-1588_orig.jpg',
+      BASE+'1704387628249-FAUI4275IYV1KZ0IVDCF/mg-1599_orig.jpg',
+      BASE+'1704387628210-HBOSFTFCTMWTX45610UK/mg-1604_orig.jpg',
+      BASE+'1704387628180-3W2RZMTEQVIJ5QWNRHKL/mg-1646_orig.jpg',
+      BASE+'1704387628236-BGTYNAVGWL5815RLKPF1/mg-1649_orig.jpg',
+      BASE+'1704387628216-MODM6QJP1P3JMUHZL92M/mg-1650_orig.jpg',
+      BASE+'1704387628144-1BF74LXJFW2ACXS04K9A/mg-1662_orig.jpg',
+      BASE+'1704387628203-MPM4PTIB2JZQLWLXZ1VL/mg-1723_orig.jpg',
+      BASE+'1704387628223-XKSE25I1AN22WF0NJQLA/mg-1728-1_orig.jpg',
+      BASE+'1704387628172-OOIKNVPQ0WN2JRDXOP3J/mg-1772_orig.jpg',
+      BASE+'1704387628187-MSRTT0EMFO2CWQUT87C6/mg-1776-1_orig.jpg',
+      BASE+'1704387628197-01G3AX2AQMA6VU382T1A/mg-1779-1_orig.jpg',
+      BASE+'1704387628257-JF6RANMMASDRESKT9D7N/mg-1965_orig.jpg',
+      BASE+'1704387628242-SYW5RMFVZAU0K5SMYYMP/mg-2015_orig.jpg',
+    ]
+  },
+  {
+    id:'alyona-yuliya',title:'Alyona & Yuliya',label:'Editorial de moda',
+    cover: BASE+'1704387627514-ZPZPPKL64C4GQWDTF61P/alyona-mano2-orig-orig_orig.jpg',
+    images:[
+      BASE+'1704387627404-5UKICT7MKECJUT7C48M3/alyona-mano2-orig_orig.jpg',
+      BASE+'1704387627425-NIJ7JTTWIRMA5WV66ZS4/alyona-mano4-orig_orig.jpg',
+      BASE+'1704387627416-8AG1TOM3HLPYUHZOOGYT/alyona-mano-orig_orig.jpg',
+      BASE+'1704387627454-0XQCI33NCIHPVUXFB5U7/alyona-studio00928-1-orig_orig.jpg',
+      BASE+'1704387627441-A70Y4O91GJ5KTDD4BR51/alyona-studio00931-1-orig_orig.jpg',
+      BASE+'1704387627397-97Y8P9LLF6HA20JTAVG9/alyona-studio00944-1-orig_orig.jpg',
+      BASE+'1704387627381-N3230ENG7LLRD4ERRN7X/alyona-studio00959-orig_orig.jpg',
+      BASE+'1704387627448-FQK1N6LYMR9U1DGNQX4C/mg-8384-orig_orig.jpg',
+      BASE+'1704387627467-XYXMB0DVHSLK90MBVTXH/mg-8449-orig_orig.jpg',
+      BASE+'1704387627434-AJA0B9JDU1RTVJJ3BYC6/mg-8474-orig_orig.jpg',
+      BASE+'1704387627487-KVW9OFB1GY8QDHUQWQPL/mg-8646-orig_orig.jpg',
+      BASE+'1704387627479-CDR8YWPIFGA8AGW8EY5R/mg-8658-orig_orig.jpg',
+      BASE+'1704387627391-HPE04LF2FKXCO3MOQFOJ/mg-8742-orig_orig.jpg',
+      BASE+'1704387627461-MNCLC5DI62028T1V63TL/mg-8801-orig_orig.jpg',
+    ]
+  },
+];
+
+// State
+let currentProject = null;
+let lbImages = [];
+let lbIndex = 0;
+
+// Build portfolio grid
+function buildGrid(){
+  const grid = document.getElementById('projects-grid');
+  projects.forEach((p,i)=>{
+    const card = document.createElement('div');
+    card.className='project-card';
+    card.innerHTML=`
+      <img src="${p.cover}" alt="${p.title}" loading="lazy"/>
+      <div class="project-card-overlay"></div>
+      <div class="project-card-info">
+        <div class="project-card-title">${p.title}</div>
+      </div>
+      <div class="project-card-arrow">→</div>
+    `;
+    card.addEventListener('click',()=>window.location.href='project.html?id='+p.id);
+    grid.appendChild(card);
+  });
+}
+
+// Stagger cards on load
+function staggerCards(){
+  const cards = document.querySelectorAll('.project-card');
+  cards.forEach((c,i)=>{
+    setTimeout(()=>c.classList.add('visible'), i*60);
+  });
+}
+
+// Open project
+function openProject(p){
+  currentProject=p;
+  document.getElementById('portfolio-index').style.display='none';
+  const view=document.getElementById('project-view');
+  view.style.display='block';
+  view.classList.remove('visible');
+
+  document.getElementById('detail-label').textContent=p.label;
+  document.getElementById('detail-title').innerHTML=p.title.replace(/(\w+)$/,'<em>$1</em>');
+  const cnt=p.video?'Vídeo':p.images.length+' fotos';
+  document.getElementById('detail-count').textContent=cnt;
+
+  // Mostrar botón volver
+  document.getElementById('nav-back').style.display='inline-flex';
+
+  // Build gallery
+  const gallery=document.getElementById('project-gallery');
+  gallery.innerHTML='';
+  lbImages=p.images;
+
+  const videoIds = p.videos || (p.video ? [p.video] : []);
+  if(videoIds.length){
+    gallery.style.columnCount='1';
+    videoIds.forEach(vid=>{
+      const wrap=document.createElement('div');
+      wrap.className='video-wrap';
+      wrap.innerHTML=`<iframe src="https://player.vimeo.com/video/${vid}?autoplay=0&title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>`;
+      gallery.appendChild(wrap);
+    });
+  } else {
+    gallery.style.columnCount='';
+    p.images.forEach((url,i)=>{
+      const item=document.createElement('div');
+      item.className='gallery-item';
+      item.innerHTML=`<img src="${url}" alt="${p.title} ${i+1}" loading="lazy"/>`;
+      item.addEventListener('click',()=>openLightbox(i));
+      gallery.appendChild(item);
+    });
+  }
+
+  requestAnimationFrame(()=>{
+    view.classList.add('visible');
+    window.scrollTo({top:0,behavior:'smooth'});
+    setTimeout(staggerGallery,100);
+  });
+}
+
+function staggerGallery(){
+  document.querySelectorAll('.gallery-item').forEach((el,i)=>{
+    setTimeout(()=>el.classList.add('visible'),i*40);
+  });
+}
+
+// Close project
+function closeProject(){
+  document.getElementById('project-view').style.display='none';
+  document.getElementById('project-view').classList.remove('visible');
+  document.getElementById('portfolio-index').style.display='block';
+  document.getElementById('nav-back').style.display='none';
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+// Lightbox
+function _noScroll(e){e.preventDefault();}
+function openLightbox(i){
+  lbIndex=i;
+  const lb=document.getElementById('lightbox');
+  document.getElementById('lb-img').src=lbImages[i];
+  document.getElementById('lb-counter').textContent=(i+1)+' / '+lbImages.length;
+  lb.classList.add('open');
+  document.body.style.overflow='hidden';
+  window.addEventListener('wheel',_noScroll,{passive:false});
+  window.addEventListener('touchmove',_noScroll,{passive:false});
+}
+function closeLightbox(){
+  document.getElementById('lightbox').classList.remove('open');
+  document.body.style.overflow='';
+  window.removeEventListener('wheel',_noScroll);
+  window.removeEventListener('touchmove',_noScroll);
+}
+function lbNav(dir){
+  lbIndex=(lbIndex+dir+lbImages.length)%lbImages.length;
+  const img=document.getElementById('lb-img');
+  img.style.opacity='0';
+  setTimeout(()=>{
+    img.src=lbImages[lbIndex];
+    img.style.opacity='1';
+    document.getElementById('lb-counter').textContent=(lbIndex+1)+' / '+lbImages.length;
+  },150);
+}
+
+// Keyboard
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape') closeLightbox();
+  if(e.key==='ArrowRight') lbNav(1);
+  if(e.key==='ArrowLeft') lbNav(-1);
+});
+
+// cursor
+const cur=document.getElementById('cur');
+if(cur&&window.matchMedia('(pointer:fine)').matches){
+  let mx=-100,my=-100,rx=-100,ry=-100,visible=false;
+  document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;if(!visible){cur.style.opacity='1';visible=true;}});
+  document.addEventListener('mouseleave',()=>{cur.style.opacity='0';visible=false;});
+  (function lerp(){rx+=(mx-rx)*.14;ry+=(my-ry)*.14;cur.style.left=rx+'px';cur.style.top=ry+'px';requestAnimationFrame(lerp)})();
+  document.querySelectorAll('a,button').forEach(el=>{
+    el.addEventListener('mouseenter',()=>document.body.classList.add('hov'));
+    el.addEventListener('mouseleave',()=>document.body.classList.remove('hov'));
+  });
+}
+// mobile menu
+const burger=document.getElementById('navBurger'),overlay=document.getElementById('navOverlay');
+if(burger){
+  burger.addEventListener('click',()=>{
+    burger.classList.toggle('open');
+    overlay.classList.toggle('open');
+    document.body.style.overflow=overlay.classList.contains('open')?'hidden':'';
+  });
+  overlay.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+    burger.classList.remove('open');overlay.classList.remove('open');
+    document.body.style.overflow='';
+  }));
+}
+
+// Intersection observer for scroll animations
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')});
+},{threshold:.1});
+
+// Init
+buildGrid();
+staggerCards();
+
+// Observe gallery items on scroll
+document.addEventListener('click',()=>{
+  setTimeout(()=>{
+    document.querySelectorAll('.gallery-item:not(.visible)').forEach(el=>obs.observe(el));
+  },200);
+});
+</script>
+  <script src="lang.js"></script>
+</body>
+</html>
