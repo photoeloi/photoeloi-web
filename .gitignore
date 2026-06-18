@@ -1,3 +1,7 @@
 .claude/
 .DS_Store
 Thumbs.db
+
+# Skills de Claude (Superpowers, etc.) — herramientas locales, NO parte de la web
+.agents/
+skills-lock.json
