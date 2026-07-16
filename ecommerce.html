@@ -186,9 +186,9 @@
     .trabajos-section .tag{color:var(--accent);margin-bottom:14px;opacity:1}
     .trabajos-section h2{font-family:var(--serif);font-size:clamp(26px,3.2vw,46px);font-weight:300;color:#fff;margin-bottom:60px;line-height:1.1}
     .trabajos-section h2 em{font-style:italic;color:var(--accent)}
-    .trabajos-grid{column-count:4;column-gap:4px}
-    .trabajo{break-inside:avoid;margin-bottom:4px;overflow:hidden;position:relative}
-    .trabajo img{width:100%;display:block;filter:brightness(.92) saturate(.9);transition:transform .7s cubic-bezier(.25,.46,.45,.94),filter .4s}
+    .trabajos-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:4px}
+    .trabajo{overflow:hidden;position:relative;aspect-ratio:4/5}
+    .trabajo img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.92) saturate(.9);transition:transform .7s cubic-bezier(.25,.46,.45,.94),filter .4s}
     .trabajo:hover img{transform:scale(1.04);filter:brightness(1) saturate(1)}
 
     /* ── PACKS ── */
@@ -281,7 +281,7 @@
       .packs-grid{grid-template-columns:1fr}
       .pack-card:hover{transform:none}
       .proceso-steps{grid-template-columns:1fr 1fr}
-      .trabajos-grid{column-count:3}
+      .trabajos-grid{grid-template-columns:repeat(3,1fr)}
     }
     @media(max-width:768px){
       body{cursor:auto}#cur{display:none}
@@ -303,7 +303,7 @@
       .proceso-section{padding:60px 24px 0}
       .proceso-steps{grid-template-columns:1fr}
       .trabajos-section{padding:60px 24px}
-      .trabajos-grid{column-count:2}
+      .trabajos-grid{grid-template-columns:repeat(2,1fr)}
       .gallery-section{grid-template-columns:1fr 1fr}
       .packs-section,.faq-section{padding:60px 24px}
       .cta-section{padding:80px 24px}
@@ -491,14 +491,17 @@
   <span class="tag fade-up">Integración IA · Ecommerce</span>
   <h2 class="fade-up" style="transition-delay:.1s">Ejemplos de <em>trabajos realizados</em></h2>
   <div class="trabajos-grid">
-    <div class="trabajo fade-up" style="transition-delay:.05s"><img src="https://res.cloudinary.com/dmajnty6m/image/fetch/w_800,q_auto,f_auto/https://photoeloi.com/img/ecommerce/integracion-ia-01.jpg" width="800" height="993" alt="Vestido camisero de lino marrón en embarcadero, fotografía de moda ecommerce con modelo IA" loading="lazy"/></div>
-    <div class="trabajo fade-up" style="transition-delay:.1s"><img src="https://res.cloudinary.com/dmajnty6m/image/fetch/w_800,q_auto,f_auto/https://photoeloi.com/img/ecommerce/integracion-ia-04.jpg" width="800" height="993" alt="Vestido largo boho estampado zigzag, fotografía de moda ecommerce en exteriores con IA" loading="lazy"/></div>
-    <div class="trabajo fade-up" style="transition-delay:.15s"><img src="https://res.cloudinary.com/dmajnty6m/image/fetch/w_800,q_auto,f_auto/https://photoeloi.com/img/ecommerce/integracion-ia-02.jpg" width="800" height="1071" alt="Conjunto de lino azul con top peplum, fotografía de producto con modelo virtual IA" loading="lazy"/></div>
-    <div class="trabajo fade-up" style="transition-delay:.2s"><img src="https://res.cloudinary.com/dmajnty6m/image/fetch/w_800,q_auto,f_auto/https://photoeloi.com/img/ecommerce/integracion-ia-06.jpg" width="800" height="1193" alt="Chaleco azul marino y pantalón blanco, look mediterráneo generado con integración IA" loading="lazy"/></div>
-    <div class="trabajo fade-up" style="transition-delay:.25s"><img src="https://res.cloudinary.com/dmajnty6m/image/fetch/w_800,q_auto,f_auto/https://photoeloi.com/img/ecommerce/integracion-ia-03.jpg" width="800" height="1071" alt="Mono azul marino con capazo de rafia, street style ecommerce con modelo IA" loading="lazy"/></div>
-    <div class="trabajo fade-up" style="transition-delay:.3s"><img src="https://res.cloudinary.com/dmajnty6m/image/fetch/w_800,q_auto,f_auto/https://photoeloi.com/img/ecommerce/integracion-ia-07.jpg" width="800" height="993" alt="Vestido infantil de flores, fotografía ecommerce de moda kids con integración IA" loading="lazy"/></div>
-    <div class="trabajo fade-up" style="transition-delay:.35s"><img src="https://res.cloudinary.com/dmajnty6m/image/fetch/w_800,q_auto,f_auto/https://photoeloi.com/img/ecommerce/integracion-ia-05.jpg" width="800" height="993" alt="Blusa y shorts bordados en azul cielo junto al mar, moda ecommerce con modelo virtual" loading="lazy"/></div>
-    <div class="trabajo fade-up" style="transition-delay:.4s"><img src="https://res.cloudinary.com/dmajnty6m/image/fetch/w_800,q_auto,f_auto/https://photoeloi.com/img/ecommerce/integracion-ia-08.jpg" width="800" height="994" alt="Vestido rosa empolvado con detalle fruncido junto al mar, fotografía ecommerce con integración IA" loading="lazy"/></div>
+    <div class="trabajo fade-up" style="transition-delay:.05s"><img src="https://res.cloudinary.com/dmajnty6m/image/fetch/w_800,h_1000,c_fill,g_auto,q_auto,f_auto/https://photoeloi.com/img/ecommerce/integracion-ia-01.jpg" width="800" height="1000" alt="Vestido camisero de lino marrón en embarcadero, fotografía de moda ecommerce con modelo IA" loading="lazy"/></div>
+    <div class="trabajo fade-up" style="transition-delay:.1s"><img src="https://res.cloudinary.com/dmajnty6m/image/fetch/w_800,h_1000,c_fill,g_auto,q_auto,f_auto/https://photoeloi.com/img/ecommerce/integracion-ia-04.jpg" width="800" height="1000" alt="Vestido largo boho estampado zigzag, fotografía de moda ecommerce en exteriores con IA" loading="lazy"/></div>
+    <div class="trabajo fade-up" style="transition-delay:.15s"><img src="https://res.cloudinary.com/dmajnty6m/image/fetch/w_800,h_1000,c_fill,g_auto,q_auto,f_auto/https://photoeloi.com/img/ecommerce/integracion-ia-09.jpg" width="800" height="1000" alt="Look de bermudas navy con blusa de volantes transparente, fotografía ecommerce con modelo IA" loading="lazy"/></div>
+    <div class="trabajo fade-up" style="transition-delay:.2s"><img src="https://res.cloudinary.com/dmajnty6m/image/fetch/w_800,h_1000,c_fill,g_auto,q_auto,f_auto/https://photoeloi.com/img/ecommerce/integracion-ia-06.jpg" width="800" height="1000" alt="Chaleco azul marino y pantalón blanco, look mediterráneo generado con integración IA" loading="lazy"/></div>
+    <div class="trabajo fade-up" style="transition-delay:.25s"><img src="https://res.cloudinary.com/dmajnty6m/image/fetch/w_800,h_1000,c_fill,g_auto,q_auto,f_auto/https://photoeloi.com/img/ecommerce/integracion-ia-03.jpg" width="800" height="1000" alt="Mono azul marino con capazo de rafia, street style ecommerce con modelo IA" loading="lazy"/></div>
+    <div class="trabajo fade-up" style="transition-delay:.3s"><img src="https://res.cloudinary.com/dmajnty6m/image/fetch/w_800,h_1000,c_fill,g_auto,q_auto,f_auto/https://photoeloi.com/img/ecommerce/integracion-ia-10.jpg" width="800" height="1000" alt="Bermudas navy con camisa de lazo y puños blancos, fotografía de moda ecommerce con IA" loading="lazy"/></div>
+    <div class="trabajo fade-up" style="transition-delay:.35s"><img src="https://res.cloudinary.com/dmajnty6m/image/fetch/w_800,h_1000,c_fill,g_auto,q_auto,f_auto/https://photoeloi.com/img/ecommerce/integracion-ia-08.jpg" width="800" height="1000" alt="Vestido rosa empolvado con detalle fruncido junto al mar, fotografía ecommerce con integración IA" loading="lazy"/></div>
+    <div class="trabajo fade-up" style="transition-delay:.4s"><img src="https://res.cloudinary.com/dmajnty6m/image/fetch/w_800,h_1000,c_fill,g_auto,q_auto,f_auto/https://photoeloi.com/img/ecommerce/integracion-ia-05.jpg" width="800" height="1000" alt="Blusa y shorts bordados en azul cielo junto al mar, moda ecommerce con modelo virtual" loading="lazy"/></div>
+    <div class="trabajo fade-up" style="transition-delay:.45s"><img src="https://res.cloudinary.com/dmajnty6m/image/fetch/w_800,h_1000,c_fill,g_auto,q_auto,f_auto/https://photoeloi.com/img/ecommerce/integracion-ia-11.jpg" width="800" height="1000" alt="Blusa de volantes transparente con pantalones largos, fotografía ecommerce con modelo virtual" loading="lazy"/></div>
+    <div class="trabajo fade-up" style="transition-delay:.5s"><img src="https://res.cloudinary.com/dmajnty6m/image/fetch/w_800,h_1000,c_fill,g_auto,q_auto,f_auto/https://photoeloi.com/img/ecommerce/integracion-ia-07.jpg" width="800" height="1000" alt="Vestido infantil de flores, fotografía ecommerce de moda kids con integración IA" loading="lazy"/></div>
+    <div class="trabajo fade-up" style="transition-delay:.55s"><img src="https://res.cloudinary.com/dmajnty6m/image/fetch/w_800,h_1000,c_fill,g_auto,q_auto,f_auto/https://photoeloi.com/img/ecommerce/integracion-ia-12.jpg" width="800" height="1000" alt="Camisa con lazo y puños blancos y pantalones largos, fotografía de moda con integración IA" loading="lazy"/></div>
   </div>
 </div>
 
