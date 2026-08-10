@@ -63,8 +63,8 @@
       en: { 'pf-label':'Works','pf-title':'Port<em>folio</em>','pf-cta':'Book a session','pf-back':'Back to portfolio' }
     },
     magazine: {
-      es: { 'mag-title':'Maga<em>zine</em>' },
-      en: { 'mag-title':'Maga<em>zine</em>' }
+      es: { 'mag-title':'Maga<em>zine</em>', 'mag-more':'Más artículos', 'mag-less':'Ver menos' },
+      en: { 'mag-title':'Maga<em>zine</em>', 'mag-more':'More articles', 'mag-less':'Show less' }
     },
     ecommerce: {
       es: {

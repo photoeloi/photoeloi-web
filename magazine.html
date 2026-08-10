@@ -91,6 +91,18 @@
     .art-card-read{display:inline-flex;align-items:center;gap:7px;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--dark);margin-top:14px}
     .art-card-read::after{content:'→';transition:transform .25s}
     .art-card:hover .art-card-read::after{transform:translateX(4px)}
+    .art-card.art-hidden{display:none}
+    .more-wrap{display:flex;justify-content:center;margin-top:44px}
+    .more-wrap[hidden]{display:none}
+    .btn-more{display:inline-flex;align-items:center;gap:10px;background:transparent;color:var(--dark);font-family:var(--sans);font-size:11px;letter-spacing:.2em;text-transform:uppercase;padding:15px 34px;border:1px solid rgba(0,0,0,.2);transition:border-color .3s,color .3s}
+    .btn-more:hover{border-color:var(--accent);color:var(--accent)}
+    .btn-more::after{content:'↓';font-size:12px;transition:transform .25s}
+    .btn-more:hover::after{transform:translateY(2px)}
+    .btn-more.expanded::after{content:'↑'}
+    .btn-more.expanded:hover::after{transform:translateY(-2px)}
+    .btn-more .less-label{display:none}
+    .btn-more.expanded .more-label{display:none}
+    .btn-more.expanded .less-label{display:inline}
 
     /* ---- MASONRY GRID ---- */
     .gallery-head{padding:48px 48px 0}
@@ -233,6 +245,12 @@
     </a>
 
   </div>
+  <div class="more-wrap" id="moreWrap" hidden>
+    <button class="btn-more" id="moreBtn" type="button">
+      <span class="more-label" data-i18n="mag-more">Más artículos</span>
+      <span class="less-label" data-i18n="mag-less">Ver menos</span>
+    </button>
+  </div>
 </section>
 
 <div class="gallery-head fade-up">
@@ -323,6 +341,34 @@ function lbNav(d){
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLb();if(e.key==='ArrowRight')lbNav(1);if(e.key==='ArrowLeft')lbNav(-1);});
 
 const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.05});
+
+// artículos: mostrar los 3 más recientes y desplegar el resto sin recargar
+const artCards=[].slice.call(document.querySelectorAll('.articles-grid .art-card'));
+const moreWrap=document.getElementById('moreWrap');
+const moreBtn=document.getElementById('moreBtn');
+const ART_STEP=3;
+let artShown=ART_STEP;
+function renderArts(){
+  artCards.forEach((c,i)=>c.classList.toggle('art-hidden',i>=artShown));
+  moreBtn.classList.toggle('expanded',artShown>=artCards.length);
+}
+if(artCards.length>ART_STEP){
+  moreWrap.hidden=false;
+  renderArts();
+  moreBtn.addEventListener('click',()=>{
+    if(artShown>=artCards.length){
+      artShown=ART_STEP;
+      renderArts();
+      document.querySelector('.articles-section').scrollIntoView({behavior:'smooth',block:'start'});
+    }else{
+      const from=artShown;
+      artShown=Math.min(artShown+ART_STEP,artCards.length);
+      renderArts();
+      artCards.slice(from,artShown).forEach((c,i)=>setTimeout(()=>c.classList.add('visible'),i*90));
+    }
+  });
+}
+
 buildGrid();
 setTimeout(()=>{
   document.querySelectorAll('.mag-item').forEach((el,i)=>{setTimeout(()=>obs.observe(el),i*30);});
