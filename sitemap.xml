@@ -73,9 +73,16 @@
 
   <url>
     <loc>https://photoeloi.com/magazine</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-08-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://photoeloi.com/magazine-ai-act-etiquetado-moda</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <url>
