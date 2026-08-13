@@ -649,23 +649,28 @@
     if(!ok) return;
     v.src = v.dataset.src;
     v.load();
+    let pausadoPorElUsuario = false;
     v.addEventListener('canplay', function(){
       v.play().then(()=>{
         v.classList.add('ready');           // funde sobre la imagen fija
         btn.classList.add('show','playing');
         txt.textContent = 'Pausa';
+        vigilarVisibilidad();
       }).catch(()=>{});
     }, {once:true});
     btn.addEventListener('click', function(){
-      if(v.paused){ v.play(); btn.classList.add('playing'); txt.textContent='Pausa'; }
-      else { v.pause(); btn.classList.remove('playing'); txt.textContent='Reproducir'; }
+      if(v.paused){ pausadoPorElUsuario=false; v.play(); btn.classList.add('playing'); txt.textContent='Pausa'; }
+      else { pausadoPorElUsuario=true; v.pause(); btn.classList.remove('playing'); txt.textContent='Reproducir'; }
     });
-    // no gastar CPU ni datos cuando la cabecera no se ve
-    if('IntersectionObserver' in window){
+    // no gastar CPU ni bateria cuando la cabecera no se ve. Se activa una vez
+    // el video ya rueda: si se observa antes, el primer aviso puede llegar con
+    // la maquetacion sin asentar y lo pausaria nada mas empezar.
+    function vigilarVisibilidad(){
+      if(!('IntersectionObserver' in window)) return;
       new IntersectionObserver(function(es){
         es.forEach(function(e){
-          if(e.isIntersecting){ if(btn.classList.contains('playing')) v.play().catch(()=>{}); }
-          else v.pause();
+          if(!e.isIntersecting) v.pause();
+          else if(!pausadoPorElUsuario) v.play().catch(()=>{});
         });
       },{threshold:.15}).observe(v);
     }
