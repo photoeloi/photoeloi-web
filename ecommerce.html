@@ -380,6 +380,7 @@
     <img src="/img/ecommerce/hero-ia-poster-v2.jpg" alt="Fotografía y vídeo de producto para ecommerce con IA en Barcelona" width="1600" height="900" fetchpriority="high"/>
     <video id="heroVideo" muted loop playsinline preload="none"
            data-src="/img/ecommerce/hero-ia.mp4"
+           data-src-movil="/img/ecommerce/hero-ia-movil.mp4"
            aria-label="Reel de fotografía y vídeo de producto para ecommerce con inteligencia artificial"></video>
     <button class="hero-play" id="heroPlay" type="button" aria-label="Pausar o reproducir el vídeo"><span id="heroPlayTxt">Pausa</span></button>
   </div>
@@ -637,20 +638,21 @@
 
 <script>
   // ── VÍDEO DE CABECERA ──
-  // Sólo se descarga en pantallas grandes: en móvil o con ahorro de datos
-  // se queda el póster, que pesa 85 KB en lugar de 3 MB.
+  // Se reproduce en móvil y en escritorio, con una copia ligera (1,2 MB)
+  // para pantallas pequeñas. Con ahorro de datos, conexión lenta o
+  // animaciones reducidas se queda la imagen fija de 62 KB.
   (function(){
     const v = document.getElementById('heroVideo');
     if(!v) return;
     const btn = document.getElementById('heroPlay');
     const txt = document.getElementById('heroPlayTxt');
     const conn = navigator.connection || {};
-    const ok = window.matchMedia('(min-width:1101px)').matches
-            && !window.matchMedia('(prefers-reduced-motion:reduce)').matches
+    const movil = window.matchMedia('(max-width:1100px)').matches;
+    const ok = !window.matchMedia('(prefers-reduced-motion:reduce)').matches
             && !conn.saveData
             && !/2g/.test(conn.effectiveType || '');
     if(!ok) return;
-    v.src = v.dataset.src;
+    v.src = movil ? v.dataset.srcMovil : v.dataset.src;
     v.load();
     let pausadoPorElUsuario = false;
     v.addEventListener('canplay', function(){
