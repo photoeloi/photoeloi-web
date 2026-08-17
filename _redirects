@@ -1,5 +1,55 @@
-# Netlify redirects — URLs limpias sin .html
-/portfolio/:project   /project.html?id=:project   200
+# ============================================================
+# Netlify redirects
+# ============================================================
+# Las paginas de proyecto son ficheros reales en /portfolio/<id>.html,
+# asi que Netlify ya las sirve en /portfolio/<id> sin necesidad de regla.
+# NO reintroducir una regla comodin /portfolio/:project -> /project.html:
+# servia el mismo HTML para cualquier ruta y generaba paginas duplicadas
+# sin canonica (error de Search Console, ago. 2026).
+
+# --- URLs antiguas con parametro -> pagina limpia del proyecto ---
+/project.html  id=:project   /portfolio/:project   301
+/project.html                /portfolio            301
+
+# ============================================================
+# Migracion desde Squarespace (estructura /marcas, /corporativo, /home)
+# Origen: export Coverage-Drilldown 2026-08-17 (32 URLs en 404)
+# El parametro ?itemId= de Squarespace se reenvia solo; la canonica
+# de la pagina destino lo consolida.
+# ============================================================
+
+# --- Proyectos con equivalente directo ---
+/marcas/suzet-ateliers            /portfolio/suzet-atelier    301
+/marcas/princess-bikini           /portfolio/princess-bikinis  301
+/marcas/liz-swimwear-costa-rica   /portfolio/liz-swimwear      301
+/marcas/exoticagin                /portfolio/exotica-gin       301
+/marcas/glenisswimwear            /portfolio/glenis            301
+/marcas/martina-pavia-            /portfolio/martina-pavia     301
+
+# --- Antigua version en ingles ---
+/en/marcas/martina-pavia-         /portfolio/martina-pavia     301
+/en/marcas/*                      /portfolio                   301
+/en/*                             /                            301
+
+# --- Indice de marcas y proyectos sin equivalente ---
+/marcas                           /portfolio                   301
+/marcas/*                         /portfolio                   301
+
+# --- Corporativo: ya no hay pagina por cliente ---
+/corporativo/*                    /corporativo                 301
+
+# --- Paginas sueltas de la web antigua ---
+/home                             /                            301
+/books                            /booksreserva                301
+/bcnhostess                       /portfolio                   301
+
+# Nota: /pruebas se deja en 404 a proposito. Era una pagina de pruebas
+# sin contenido equivalente; un 404 es la respuesta correcta y Google
+# la retira del indice por si sola.
+
+# ============================================================
+# Rutas limpias del resto de paginas
+# ============================================================
 /portfolio            /portfolio.html              200
 /magazine             /magazine.html               200
 /ecommerce            /ecommerce.html              200
