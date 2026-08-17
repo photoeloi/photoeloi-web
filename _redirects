@@ -36,9 +36,13 @@
 /marcas/*                         /portfolio                   301
 
 # --- Corporativo: ya no hay pagina por cliente ---
-# Lleva "!" (shadowing forzado) porque existe corporativo.html: sin el,
-# la resolucion de ficheros de Netlify tapa la regla y devuelve 404.
-/corporativo/*                    /corporativo                 301!
+# Reglas explicitas a proposito. Un comodin /corporativo/* -> /corporativo
+# NO funciona (probado en produccion, devolvia 404): Netlify descarta la
+# regla porque el destino queda dentro del propio patron y la lee como
+# bucle. Si aparecen mas URLs antiguas de corporativo, añadirlas aqui.
+/corporativo/yogaone-born            /corporativo              301
+/corporativo/coco-gabriel            /corporativo              301
+/corporativo/boston-consulting-group /corporativo              301
 
 # --- Paginas sueltas de la web antigua ---
 /home                             /                            301
