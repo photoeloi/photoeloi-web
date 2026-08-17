@@ -1,0 +1,10 @@
+# Netlify: cabeceras por ruta
+
+/site.webmanifest
+  Content-Type: application/manifest+json; charset=utf-8
+
+# Los iconos y el logo no cambian: cache larga
+/favicon.ico
+  Cache-Control: public, max-age=604800
+/img/brand/*
+  Cache-Control: public, max-age=2592000
