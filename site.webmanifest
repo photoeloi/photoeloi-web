@@ -1,0 +1,15 @@
+{
+  "name": "Eloi Garcia · Fotógrafo Barcelona",
+  "short_name": "Eloi Garcia",
+  "description": "Fotografía de moda, editorial y producto para ecommerce con inteligencia artificial en Barcelona.",
+  "lang": "es",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fafaf8",
+  "theme_color": "#fafaf8",
+  "icons": [
+    { "src": "/img/brand/eg-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/img/brand/eg-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/img/brand/eg-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
