@@ -127,6 +127,13 @@
     .faq-item:last-child{border-bottom:1px solid var(--border)}
     .faq-item h3{font-family:var(--sans);font-size:16px;font-weight:500;margin-bottom:10px;color:#1a1a1a}
     .faq-item p{font-size:15px;line-height:1.8;color:rgba(0,0,0,.66)}
+    .art-service{max-width:720px;margin:52px auto 0;padding:28px 30px;border:1px solid var(--border);background:var(--surface,#f5f5f3);display:flex;flex-direction:column;gap:12px}
+    .art-service .as-label{font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:var(--accent)}
+    .art-service h3{font-family:var(--serif);font-size:clamp(21px,2.4vw,27px);font-weight:400;line-height:1.2;margin:0;color:var(--dark)}
+    .art-service p{font-size:15px;line-height:1.75;color:var(--muted);margin:0}
+    .art-service a.as-cta{align-self:flex-start;margin-top:6px;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--dark);text-decoration:none;border-bottom:1px solid rgba(0,0,0,.25);padding-bottom:3px;transition:color .25s,border-color .25s}
+    .art-service a.as-cta:hover{color:var(--accent);border-color:var(--accent)}
+    (max-width:768px){.art-service{margin:40px auto 0;padding:24px 22px}}
     .art-tags{max-width:720px;margin:40px auto 0;padding:0 24px;display:flex;flex-wrap:wrap;gap:10px}
     .art-tags span{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);border:1px solid var(--border);padding:7px 14px;border-radius:40px}
 
@@ -318,6 +325,12 @@
     <span>Catálogo de moda</span>
     <span>Virtual try-on</span>
     <span>AI Act</span>
+  </div>
+  <div class="art-service fade-up">
+    <span class="as-label">Servicio relacionado</span>
+    <h3>Una plataforma no conoce tu producto; yo sí</h3>
+    <p>Frente al catálogo automático, trabajo la toma real de cada prenda —color, tejido, caída— y sobre esa base aplico la IA. El resultado se parece a lo que el cliente recibe en casa, y eso reduce devoluciones.</p>
+    <a class="as-cta" href="/ecommerce">Ver el servicio de fotografía con IA</a>
   </div>
 </article>
 

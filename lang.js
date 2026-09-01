@@ -85,7 +85,7 @@
     estudio: {
       es: {
         'est-space-label':'El espacio',
-        'est-title':'Espacioso y luminoso<br><em>estudio en Poble-Nou</em>',
+        'est-title':'Estudio de fotografía<br><em>en Poble-Nou, Barcelona</em>',
         'est-desc1':'Espacioso y luminoso estudio ubicado en el dinámico barrio de Poble-Nou, dentro del distrito de Sant Martí.',
         'est-desc2':'Gracias al Proyecto 22@ Barcelona, el barrio ha recuperado su histórica vitalidad económica y social, impulsada por una sólida base cultural y artística. Este proceso de renovación ha permitido restaurar un antiguo local industrial, transformándolo en un espacio único y versátil.',
         'est-desc3':'Este estudio, diseñado al más puro estilo loft neoyorquino, ofrece un entorno adaptable a las necesidades de cada cliente. La esencia de su pasado industrial se fusiona con la modernidad de un espacio cuidadosamente restaurado.',
@@ -95,7 +95,7 @@
       },
       en: {
         'est-space-label':'The Space',
-        'est-title':'Spacious and bright<br><em>studio in Poble-Nou</em>',
+        'est-title':'Photography studio<br><em>in Poble-Nou, Barcelona</em>',
         'est-desc1':'Spacious and bright studio located in the dynamic Poble-Nou neighbourhood, in the Sant Martí district.',
         'est-desc2':'Thanks to the 22@ Barcelona Project, the neighbourhood has recovered its historic economic and social vitality, driven by a solid cultural and artistic base. This renewal process allowed the restoration of a former industrial space, transforming it into a unique and versatile venue.',
         'est-desc3':'This studio, designed in the purest New York loft style, offers an adaptable environment to each client\'s needs. The essence of its industrial past merges with the modernity of a carefully restored space.',

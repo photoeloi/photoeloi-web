@@ -8,8 +8,8 @@
 # sin canonica (error de Search Console, ago. 2026).
 
 # --- URLs antiguas con parametro -> pagina limpia del proyecto ---
-/project.html  id=:project   /portfolio/:project   301
-/project.html                /portfolio            301
+/project.html  id=:project   /portfolio/:project   301!
+/project.html                /portfolio            301!
 
 # ============================================================
 # Migracion desde Squarespace (estructura /marcas, /corporativo, /home)
@@ -139,6 +139,3 @@
 /portfolio/vip-picnic.html                      /portfolio/vip-picnic                       301!
 /portfolio/was-swimwear.html                    /portfolio/was-swimwear                     301!
 
-# --- Pagina antigua de proyectos: retirada ---
-/project.html  id=:project   /portfolio/:project   301!
-/project.html                /portfolio            301!
