@@ -61,3 +61,84 @@
 /ecommerce            /ecommerce.html              200
 /estudio              /estudio.html                200
 /contacto             /contacto.html               200
+
+# ============================================================
+# URLs antiguas de proyecto sin guiones (indexadas en Google)
+# Origen: auditoria 1 sept 2026. /portfolio/juliamartinez y
+# /portfolio/wasswimwear salian en resultados devolviendo 404.
+# ============================================================
+/portfolio/alyonayuliya           /portfolio/alyona-yuliya          301
+/portfolio/armademujer            /portfolio/arma-de-mujer          301
+/portfolio/billyelliot            /portfolio/billy-elliot           301
+/portfolio/dinneratmyhouse        /portfolio/dinner-at-my-house     301
+/portfolio/exoticagin             /portfolio/exotica-gin            301
+/portfolio/fetebarcelona          /portfolio/fete-barcelona         301
+/portfolio/gianniversace          /portfolio/gianni-versace         301
+/portfolio/hazzyskids             /portfolio/hazzys-kids            301
+/portfolio/introspectivejourney   /portfolio/introspective-journey  301
+/portfolio/juliamartinez          /portfolio/julia-martinez         301
+/portfolio/lemonmagazine          /portfolio/lemon-magazine         301
+/portfolio/lizswimwear            /portfolio/liz-swimwear           301
+/portfolio/luckytry               /portfolio/lucky-try              301
+/portfolio/martinapavia           /portfolio/martina-pavia          301
+/portfolio/mylittlepony           /portfolio/my-little-pony         301
+/portfolio/newyearparty           /portfolio/new-year-party         301
+/portfolio/poblenouantic          /portfolio/poblenou-antic         301
+/portfolio/princessbikinis        /portfolio/princess-bikinis       301
+/portfolio/suzetatelier           /portfolio/suzet-atelier          301
+/portfolio/thecrazyside           /portfolio/the-crazy-side         301
+/portfolio/valentinabentos        /portfolio/valentina-bentos       301
+/portfolio/vippicnic              /portfolio/vip-picnic             301
+/portfolio/wasswimwear            /portfolio/was-swimwear           301
+
+# ============================================================
+# Una sola direccion por pagina: .html -> URL limpia.
+# El '!' es imprescindible: sin el, Netlify sirve el fichero
+# estatico y la regla nunca llega a aplicarse.
+# ============================================================
+/booksreserva.html                              /booksreserva                               301!
+/clasesprivadasphotoeloi.html                   /clasesprivadasphotoeloi                    301!
+/contacto.html                                  /contacto                                   301!
+/corporativo.html                               /corporativo                                301!
+/ecommerce.html                                 /ecommerce                                  301!
+/estudio.html                                   /estudio                                    301!
+/index.html                                     /index                                      301!
+/interiorismo.html                              /interiorismo                               301!
+/magazine-ai-act-etiquetado-moda.html           /magazine-ai-act-etiquetado-moda            301!
+/magazine-ia-fotografia-moda.html               /magazine-ia-fotografia-moda                301!
+/magazine-modelos-virtuales-ia-moda.html        /magazine-modelos-virtuales-ia-moda         301!
+/magazine-plataformas-ia-catalogo-moda.html     /magazine-plataformas-ia-catalogo-moda      301!
+/magazine-ugc-ia-publicidad-moda.html           /magazine-ugc-ia-publicidad-moda            301!
+/magazine-video-generativo-consistencia-moda.html /magazine-video-generativo-consistencia-moda 301!
+/magazine.html                                  /magazine                                   301!
+/marketing.html                                 /marketing                                  301!
+/portfolio.html                                 /portfolio                                  301!
+/reportajebodas.html                            /reportajebodas                             301!
+/portfolio/alyona-yuliya.html                   /portfolio/alyona-yuliya                    301!
+/portfolio/arma-de-mujer.html                   /portfolio/arma-de-mujer                    301!
+/portfolio/billy-elliot.html                    /portfolio/billy-elliot                     301!
+/portfolio/dinner-at-my-house.html              /portfolio/dinner-at-my-house               301!
+/portfolio/exotica-gin.html                     /portfolio/exotica-gin                      301!
+/portfolio/fete-barcelona.html                  /portfolio/fete-barcelona                   301!
+/portfolio/gianni-versace.html                  /portfolio/gianni-versace                   301!
+/portfolio/glenis.html                          /portfolio/glenis                           301!
+/portfolio/hazzys-kids.html                     /portfolio/hazzys-kids                      301!
+/portfolio/introspective-journey.html           /portfolio/introspective-journey            301!
+/portfolio/julia-martinez.html                  /portfolio/julia-martinez                   301!
+/portfolio/lemon-magazine.html                  /portfolio/lemon-magazine                   301!
+/portfolio/liz-swimwear.html                    /portfolio/liz-swimwear                     301!
+/portfolio/lucky-try.html                       /portfolio/lucky-try                        301!
+/portfolio/martina-pavia.html                   /portfolio/martina-pavia                    301!
+/portfolio/my-little-pony.html                  /portfolio/my-little-pony                   301!
+/portfolio/new-year-party.html                  /portfolio/new-year-party                   301!
+/portfolio/poblenou-antic.html                  /portfolio/poblenou-antic                   301!
+/portfolio/princess-bikinis.html                /portfolio/princess-bikinis                 301!
+/portfolio/suzet-atelier.html                   /portfolio/suzet-atelier                    301!
+/portfolio/the-crazy-side.html                  /portfolio/the-crazy-side                   301!
+/portfolio/valentina-bentos.html                /portfolio/valentina-bentos                 301!
+/portfolio/vip-picnic.html                      /portfolio/vip-picnic                       301!
+/portfolio/was-swimwear.html                    /portfolio/was-swimwear                     301!
+
+# --- Pagina antigua de proyectos: retirada ---
+/project.html  id=:project   /portfolio/:project   301!
+/project.html                /portfolio            301!

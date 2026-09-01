@@ -70,7 +70,7 @@
       es: {
         'ec-page-tag':'Fotografía de Producto · Inteligencia Artificial',
         'ec-page-title':'Fotografía de Producto<br>para Ecommerce con<br><em>Inteligencia Artificial</em>',
-        'ec-page-desc':'Soy Eloi Gracia, fotógrafo profesional en Barcelona especializado en fotografía de producto para ecommerce que combina técnicas fotográficas tradicionales con inteligencia artificial (IA). Trabajo con marcas y tiendas online para crear imágenes de catálogo que venden, con modelos virtuales, múltiples ángulos y contenido visual optimizado para plataformas digitales.',
+        'ec-page-desc':'Soy Eloi Garcia, fotógrafo profesional en Barcelona especializado en fotografía de producto para ecommerce que combina técnicas fotográficas tradicionales con inteligencia artificial (IA). Trabajo con marcas y tiendas online para crear imágenes de catálogo que venden, con modelos virtuales, múltiples ángulos y contenido visual optimizado para plataformas digitales.',
         'ec-page-tag2':'Innovación en fotografía de producto para ecommerce',
         'ec-page-h2':'Fotografía de producto con<br><em>IA y modelos virtuales</em>'
       },
