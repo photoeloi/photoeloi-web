@@ -34,11 +34,7 @@
     :root{--bg:#fafaf8;--surface:#f2f2ef;--border:rgba(0,0,0,0.08);--muted:rgba(0,0,0,0.4);--dark:#111;--accent:#b5925a;--serif:'Cormorant Garamond',Georgia,serif;--sans:'Inter',Helvetica,sans-serif;}
     html{scroll-behavior:smooth}
     body{background:var(--bg);color:var(--dark);font-family:var(--sans);font-weight:300;font-size:16px;overflow-x:hidden}
-    
-    #cur{position:fixed;left:0;top:0;width:36px;height:36px;margin:-18px 0 0 -18px;border:1px solid rgba(181,146,90,.4);border-radius:50%;pointer-events:none;z-index:9999;opacity:0;transform:translate3d(-100px,-100px,0);will-change:transform;transition:opacity .45s ease,border-color .3s ease,background-color .3s ease,scale .3s ease}
-    #cur.on{opacity:1}
-    #cur.hov{border-color:rgba(181,146,90,.9);background:rgba(181,146,90,.08);scale:1.3}
-    @media(pointer:coarse){#cur{display:none}}
+    @media(pointer:coarse){}
 
     nav{position:fixed;top:0;left:0;right:0;z-index:300;height:68px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:0 44px;background:rgba(250,250,248,0.95);backdrop-filter:blur(16px);border-bottom:1px solid rgba(0,0,0,0.07)}
     .nav-links{display:flex;gap:24px;list-style:none;align-items:center}
@@ -161,11 +157,10 @@
     .fade-up{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
     .fade-up.visible{opacity:1;transform:translateY(0)}
 
-    @media(max-width:768px){body{cursor:auto}#cur-dot,#cur-ring{display:none}nav{padding:0 20px}.nav-links{display:none}.nav-social{display:none}.nav-right{gap:0}.nav-burger{display:flex}.page-header{padding:90px 20px 32px}.articles-section{padding:40px 20px 32px}.gallery-head{padding:36px 20px 0}.cta-section{padding:56px 20px}footer{flex-direction:column;gap:16px;padding:24px 20px}}
+    @media(max-width:768px){body{cursor:auto}nav{padding:0 20px}.nav-links{display:none}.nav-social{display:none}.nav-right{gap:0}.nav-burger{display:flex}.page-header{padding:90px 20px 32px}.articles-section{padding:40px 20px 32px}.gallery-head{padding:36px 20px 0}.cta-section{padding:56px 20px}footer{flex-direction:column;gap:16px;padding:24px 20px}}
   </style>
 </head>
 <body data-page="magazine">
-<div id="cur"></div>
 
 <nav>
   <ul class="nav-links">
@@ -214,6 +209,15 @@
   <div class="section-eyebrow fade-up">Artículos · Moda &amp; Tecnología</div>
   <h2 class="section-head fade-up">Lo último en <em>moda e inteligencia artificial</em></h2>
   <div class="articles-grid">
+
+    <a href="magazine-ia-fashion-week-nueva-york-2026.html" class="art-card fade-up">
+      <div class="art-card-img"><img src="https://res.cloudinary.com/dmajnty6m/image/fetch/w_800,h_534,c_fill,g_auto,q_auto,f_auto/https://images.unsplash.com/photo-1613909671501-f9678ffc1d33" alt="La Fashion Week de Nueva York 2026, tomada por la inteligencia artificial" loading="lazy"/></div>
+      <span class="art-card-cat">Fashion Week &amp; IA</span>
+      <h3>La Fashion Week de Nueva York ya lleva IA de serie</h3>
+      <p>Un stiletto impreso en 3D con IA, conferencias tech paralelas y la sombra de Gucci en Milán: así ha entrado la inteligencia artificial en la pasarela.</p>
+      <span class="art-card-meta">7 sep 2026 · 10 min</span>
+      <span class="art-card-read">Leer artículo</span>
+    </a>
 
     <a href="magazine-ugc-ia-publicidad-moda.html" class="art-card fade-up">
       <div class="art-card-img"><img src="https://res.cloudinary.com/dmajnty6m/image/fetch/w_800,h_534,c_fill,g_auto,q_auto,f_auto/https://images.unsplash.com/photo-1744135994997-670bf75f1d0e" alt="Publicidad de moda con IA: el auge del UGC sintético" loading="lazy"/></div>
@@ -401,29 +405,7 @@ setTimeout(()=>{
 },50);
 
 // cursor
-const cur=document.getElementById('cur');
-    if(cur&&matchMedia('(pointer:fine)').matches&&!matchMedia('(prefers-reduced-motion:reduce)').matches){
-      let mx=0,my=0,rx=0,ry=0,on=false,raf=0;
-      // Se mueve con transform (lo pinta la GPU). Animar left/top obligaba al
-      // navegador a recalcular la maquetacion en cada fotograma: de ahi el tiron.
-      const draw=()=>{
-        rx+=(mx-rx)*.22; ry+=(my-ry)*.22;
-        cur.style.transform='translate3d('+rx.toFixed(2)+'px,'+ry.toFixed(2)+'px,0)';
-        raf=(Math.abs(mx-rx)>.1||Math.abs(my-ry)>.1)?requestAnimationFrame(draw):0;
-      };
-      addEventListener('mousemove',e=>{
-        mx=e.clientX; my=e.clientY;
-        if(!on){rx=mx; ry=my; cur.classList.add('on'); on=true;}
-        if(!raf)raf=requestAnimationFrame(draw);
-      },{passive:true});
-      addEventListener('mouseout',e=>{if(!e.relatedTarget){cur.classList.remove('on');on=false;}},{passive:true});
-      addEventListener('blur',()=>{cur.classList.remove('on');on=false;});
-      // Delegacion: tambien reacciona a lo que se genera despues (rejillas, tarjetas).
-      addEventListener('mouseover',e=>{
-        const t=e.target.closest?e.target.closest('a,button,[role="button"],input,textarea,select,label,.faq-q'):null;
-        cur.classList.toggle('hov',!!t);
-      },{passive:true});
-    }
+
 // mobile menu
 const burger=document.getElementById('navBurger'),overlay=document.getElementById('navOverlay');
 if(burger){
