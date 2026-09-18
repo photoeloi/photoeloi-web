@@ -132,6 +132,14 @@
     .stat-num em{font-style:italic;color:var(--accent)}
     .stat-label{font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted)}
 
+    /* ── BANNER IAESCALAPRO ── */
+    .promo-banner{padding:64px 64px 0}
+    .promo-banner a{display:block;overflow:hidden;aspect-ratio:3/1;background:var(--surface);border:1px solid var(--border)}
+    .promo-banner img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s cubic-bezier(.25,.46,.45,.94)}
+    .promo-banner a:hover img{transform:scale(1.015)}
+    .promo-banner a:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+    @media(max-width:768px){.promo-banner{padding:40px 24px 0}}
+
     /* ── INTRO ── */
     .intro-section{padding:80px 64px;border-bottom:1px solid var(--border);display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
     .intro-text .tag{opacity:1;margin-bottom:20px}
@@ -422,6 +430,16 @@
   </div>
 </div>
 
+<!-- ── BANNER IAESCALAPRO ── -->
+<div class="promo-banner">
+  <a href="https://iaescalapro.com" target="_blank" rel="noopener" aria-label="IAEscala Pro: fotografía de producto con IA a escala para todo tu catálogo">
+    <img src="/img/ecommerce/banner-iaescalapro-1920.jpg"
+         srcset="/img/ecommerce/banner-iaescalapro-960.jpg 960w, /img/ecommerce/banner-iaescalapro-1920.jpg 1920w, /img/ecommerce/banner-iaescalapro-3840.jpg 3840w"
+         sizes="(max-width:768px) calc(100vw - 48px), calc(100vw - 128px)"
+         width="1920" height="640" loading="lazy" decoding="async"
+         alt="Eloi Garcia, fotógrafo en Barcelona, e IAEscala Pro: tu catálogo entero, producido a escala con fotografía de producto con IA"/>
+  </a>
+</div>
 
 <!-- ── INTRO ── -->
 <div class="intro-section">
