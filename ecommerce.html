@@ -141,6 +141,7 @@
     .iae{outline:1px solid #c9a467;outline-offset:6px;isolation:isolate}
     .iae:focus-visible{outline-width:2px}
     .iae::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:.07;background-image:url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27300%27 height=%27300%27%3E%3Cfilter id=%27n%27%3E%3CfeTurbulence type=%27fractalNoise%27 baseFrequency=%270.8%27 numOctaves=%272%27/%3E%3C/filter%3E%3Crect width=%27100%25%27 height=%27100%25%27 filter=%27url(%23n)%27/%3E%3C/svg%3E")}
+    .iae-mesh{position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:.3;background-image:linear-gradient(rgba(238,241,247,.13) 1px,transparent 1px),linear-gradient(90deg,rgba(238,241,247,.13) 1px,transparent 1px);background-size:clamp(60px,7vw,110px) clamp(60px,7vw,110px);background-position:center;-webkit-mask-image:radial-gradient(ellipse 80% 70% at 50% 40%,#000 10%,transparent 78%);mask-image:radial-gradient(ellipse 80% 70% at 50% 40%,#000 10%,transparent 78%)}
     .iae::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(55% 80% at 88% 110%,rgba(217,184,124,.09),transparent 70%),radial-gradient(40% 60% at 6% -10%,rgba(236,211,163,.05),transparent 70%)}
     .iae-lm{display:block;overflow:hidden;padding-block:.08em}
     .iae-lm>span{display:flex;justify-content:center;transform:translateY(118%);transition:transform 1.05s var(--iae-ease);transition-delay:var(--d,0s)}
@@ -452,6 +453,7 @@
 <!-- ── BANNER IAESCALAPRO ── -->
 <div class="promo-banner">
   <a class="iae" id="iae" href="https://iaescalapro.com" target="_blank" rel="noopener" aria-label="IA Escala Pro, agencia de IA: tu catálogo entero, producido a escala. Entrar en iaescalapro.com">
+    <span class="iae-mesh" aria-hidden="true"></span>
     <span class="iae-lm" style="--d:.05s"><span class="iae-eyebrow">Fotografía de producto con IA</span></span>
     <span class="iae-lm" style="--d:.14s"><span class="iae-logo">
       <svg class="iae-icon" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#0e1421" stroke="rgba(238,241,247,.14)" stroke-width=".6"/><path d="M2.5 26 12.6 9.5l4.2 7.3 3.1-5.4L29.5 26z" fill="#eef1f7"/><circle cx="24.8" cy="6.6" r="3.4" fill="#d9b87c"/></svg>
