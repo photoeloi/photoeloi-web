@@ -203,12 +203,20 @@ function paginaPortfolio(ps) {
     html = html.replace("  const grid = document.getElementById('projects-grid');\n  projects.forEach(",
                         "  const grid = document.getElementById('projects-grid');\n  grid.innerHTML='';\n  projects.forEach(");
   if (!html.includes("grid.innerHTML='';")) throw new Error("no pude adaptar buildGrid de portfolio.html");
+  // Entradilla en el hueco derecho de la cabecera, frente al titulo: texto
+  // visible (el texto oculto no cuenta para Google) pero discreto.
   const intro = `
-  <p class="portfolio-intro">Selección de trabajos de <strong>Eloi Garcia, fotógrafo de moda y editorial en Barcelona</strong>: editoriales, lookbooks, campañas, moda de baño, fotografía de marca y vídeo. Cada proyecto tiene su propia página con la galería completa. Si buscas fotografía de producto para tu tienda online, mira también <a href="/ecommerce">fotografía ecommerce con IA</a>, o la página de <a href="/fotografo-moda-barcelona">fotografía de moda en Barcelona</a>.</p>
-  `;
-  html = sustituir(html, "intro", intro, `  <div class="projects-grid" id="projects-grid">`);
+    <p class="portfolio-intro"><a href="/fotografo-moda-barcelona">Fotógrafo de moda y editorial en Barcelona</a>. Editoriales, lookbooks, campañas y moda de baño para marcas, y <a href="/ecommerce">fotografía ecommerce con IA</a> para tiendas online.</p>
+    `;
+  html = html.replace(/<!-- estatico:intro -->[\s\S]*?<!-- \/estatico:intro -->/, "");
+  html = sustituir(html, "intro", intro, `<div class="portfolio-count">`);
   html = sustituir(html, "css", `
-  <style>.portfolio-intro{max-width:820px;padding:0 44px 28px;font-size:15px;line-height:1.85;color:var(--muted,#777)}.portfolio-intro a{color:var(--accent,#b5925a)}@media(max-width:900px){.portfolio-intro{padding:0 20px 24px}}</style>
+  <style>
+    .portfolio-intro{max-width:390px;margin:0 0 4px;font-size:12.5px;line-height:1.75;letter-spacing:.01em;color:var(--muted,#888);text-align:right}
+    .portfolio-intro a{color:var(--dark,#111);text-decoration:none;border-bottom:1px solid var(--border,#ddd);transition:border-color .25s}
+    .portfolio-intro a:hover{border-color:var(--accent,#b5925a)}
+    @media(max-width:768px){.portfolio-intro{text-align:left;max-width:none}}
+  </style>
   <noscript><style>.project-card{opacity:1!important;transform:none!important}</style></noscript>
   `, "</head>");
   fs.writeFileSync(f, html);

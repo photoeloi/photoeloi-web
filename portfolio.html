@@ -172,7 +172,12 @@
     }
   </style>
 <!-- estatico:css -->
-  <style>.portfolio-intro{max-width:820px;padding:0 44px 28px;font-size:15px;line-height:1.85;color:var(--muted,#777)}.portfolio-intro a{color:var(--accent,#b5925a)}@media(max-width:900px){.portfolio-intro{padding:0 20px 24px}}</style>
+  <style>
+    .portfolio-intro{max-width:390px;margin:0 0 4px;font-size:12.5px;line-height:1.75;letter-spacing:.01em;color:var(--muted,#888);text-align:right}
+    .portfolio-intro a{color:var(--dark,#111);text-decoration:none;border-bottom:1px solid var(--border,#ddd);transition:border-color .25s}
+    .portfolio-intro a:hover{border-color:var(--accent,#b5925a)}
+    @media(max-width:768px){.portfolio-intro{text-align:left;max-width:none}}
+  </style>
   <noscript><style>.project-card{opacity:1!important;transform:none!important}</style></noscript>
   <!-- /estatico:css --></head>
 <body data-page="portfolio">
@@ -224,12 +229,12 @@
       <span class="portfolio-label" data-i18n="pf-label">Trabajos</span>
       <h1 class="portfolio-title" data-i18n-html="pf-title">Port<em>folio</em></h1>
     </div>
-    <div class="portfolio-count">24</div>
+    <!-- estatico:intro -->
+    <p class="portfolio-intro"><a href="/fotografo-moda-barcelona">Fotógrafo de moda y editorial en Barcelona</a>. Editoriales, lookbooks, campañas y moda de baño para marcas, y <a href="/ecommerce">fotografía ecommerce con IA</a> para tiendas online.</p>
+    <!-- /estatico:intro --><div class="portfolio-count">24</div>
   </div>
 
-<!-- estatico:intro -->
-  <p class="portfolio-intro">Selección de trabajos de <strong>Eloi Garcia, fotógrafo de moda y editorial en Barcelona</strong>: editoriales, lookbooks, campañas, moda de baño, fotografía de marca y vídeo. Cada proyecto tiene su propia página con la galería completa. Si buscas fotografía de producto para tu tienda online, mira también <a href="/ecommerce">fotografía ecommerce con IA</a>, o la página de <a href="/fotografo-moda-barcelona">fotografía de moda en Barcelona</a>.</p>
-  <!-- /estatico:intro -->  <div class="projects-grid" id="projects-grid">
+  <div class="projects-grid" id="projects-grid">
     <a class="project-card" href="/portfolio/suzet-atelier"><img src="https://res.cloudinary.com/dmajnty6m/image/fetch/w_800,q_auto,f_auto/https://images.squarespace-cdn.com/content/v1/6596e42a7a382c0112cf48ee/1727947708445-LD26DZKU05VCFISWF482/_K6A0500-Recuperado.jpg" alt="Suzet Atelier — Fotografía de marca" loading="lazy"/><div class="project-card-overlay"></div><div class="project-card-info"><div class="project-card-title">Suzet Atelier</div></div><div class="project-card-arrow">→</div></a>
     <a class="project-card" href="/portfolio/julia-martinez"><img src="https://res.cloudinary.com/dmajnty6m/image/fetch/w_800,q_auto,f_auto/https://images.squarespace-cdn.com/content/v1/6596e42a7a382c0112cf48ee/1705335147726-WLYN1TC98Z1IA6QPCFOY/_K6A0620ffff.jpg" alt="Julia Martinez — Retrato editorial" loading="lazy"/><div class="project-card-overlay"></div><div class="project-card-info"><div class="project-card-title">Julia Martinez</div></div><div class="project-card-arrow">→</div></a>
     <a class="project-card" href="/portfolio/poblenou-antic"><img src="https://res.cloudinary.com/dmajnty6m/image/fetch/w_800,q_auto,f_auto/https://images.squarespace-cdn.com/content/v1/6596e42a7a382c0112cf48ee/1725441553888-9GKJJUYZ6ZIJVLIW6ST8/_K6A9237+copia.jpg" alt="Poblenou Antic — Editorial" loading="lazy"/><div class="project-card-overlay"></div><div class="project-card-info"><div class="project-card-title">Poblenou Antic</div></div><div class="project-card-arrow">→</div></a>
