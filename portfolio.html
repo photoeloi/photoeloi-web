@@ -171,20 +171,23 @@
       .portfolio-footer{flex-direction:column;gap:20px;padding:28px 20px}
     }
   </style>
-</head>
+<!-- estatico:css -->
+  <style>.portfolio-intro{max-width:820px;padding:0 44px 28px;font-size:15px;line-height:1.85;color:var(--muted,#777)}.portfolio-intro a{color:var(--accent,#b5925a)}@media(max-width:900px){.portfolio-intro{padding:0 20px 24px}}</style>
+  <noscript><style>.project-card{opacity:1!important;transform:none!important}</style></noscript>
+  <!-- /estatico:css --></head>
 <body data-page="portfolio">
 
 <!-- Navigation -->
 <nav>
   <ul class="nav-links">
-    <li><a href="index.html" data-i18n="nav-home">Home</a></li>
-    <li><a href="portfolio.html" class="active" data-i18n="nav-portfolio">Portfolio</a></li>
-    <li><a href="magazine.html" data-i18n="nav-magazine">Magazine</a></li>
-    <li><a href="ecommerce.html" data-i18n="nav-ecommerce">IA · Ecommerce</a></li>
-    <li><a href="estudio.html" data-i18n="nav-estudio">Estudio</a></li>
-    <li><a href="contacto.html" data-i18n="nav-contacto">Contacto</a></li>
+    <li><a href="/" data-i18n="nav-home">Home</a></li>
+    <li><a href="/portfolio" class="active" data-i18n="nav-portfolio">Portfolio</a></li>
+    <li><a href="/magazine" data-i18n="nav-magazine">Magazine</a></li>
+    <li><a href="/ecommerce" data-i18n="nav-ecommerce">IA · Ecommerce</a></li>
+    <li><a href="/estudio" data-i18n="nav-estudio">Estudio</a></li>
+    <li><a href="/contacto" data-i18n="nav-contacto">Contacto</a></li>
   </ul>
-  <a href="index.html" class="nav-logo"><em>Eloi</em> Garcia</a>
+  <a href="/" class="nav-logo"><em>Eloi</em> Garcia</a>
   <div class="nav-right">
     <ul class="nav-social">
       <li><a href="https://instagram.com/photoeloi" target="_blank" title="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a></li>
@@ -198,12 +201,12 @@
 </nav>
 <div class="nav-overlay" id="navOverlay">
   <ul class="overlay-links">
-    <li><a href="index.html" data-i18n="nav-home">Home</a></li>
-    <li><a href="portfolio.html" class="active" data-i18n="nav-portfolio">Portfolio</a></li>
-    <li><a href="magazine.html" data-i18n="nav-magazine">Magazine</a></li>
-    <li><a href="ecommerce.html" data-i18n="nav-ecommerce">IA · Ecommerce</a></li>
-    <li><a href="estudio.html" data-i18n="nav-estudio">Estudio</a></li>
-    <li><a href="contacto.html" data-i18n="nav-contacto">Contacto</a></li>
+    <li><a href="/" data-i18n="nav-home">Home</a></li>
+    <li><a href="/portfolio" class="active" data-i18n="nav-portfolio">Portfolio</a></li>
+    <li><a href="/magazine" data-i18n="nav-magazine">Magazine</a></li>
+    <li><a href="/ecommerce" data-i18n="nav-ecommerce">IA · Ecommerce</a></li>
+    <li><a href="/estudio" data-i18n="nav-estudio">Estudio</a></li>
+    <li><a href="/contacto" data-i18n="nav-contacto">Contacto</a></li>
   </ul>
     <button class="lang-btn lang-btn--overlay" style="margin:24px auto 0;color:rgba(0,0,0,.5);font-size:10px;letter-spacing:.2em"><svg viewBox="0 0 24 24" style="width:14px;height:14px;fill:currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg><span class="lang-current">EN</span></button>
   <ul class="overlay-social">
@@ -224,11 +227,38 @@
     <div class="portfolio-count">24</div>
   </div>
 
-  <div class="projects-grid" id="projects-grid"></div>
+<!-- estatico:intro -->
+  <p class="portfolio-intro">Selección de trabajos de <strong>Eloi Garcia, fotógrafo de moda y editorial en Barcelona</strong>: editoriales, lookbooks, campañas, moda de baño, fotografía de marca y vídeo. Cada proyecto tiene su propia página con la galería completa. Si buscas fotografía de producto para tu tienda online, mira también <a href="/ecommerce">fotografía ecommerce con IA</a>, o la página de <a href="/fotografo-moda-barcelona">fotografía de moda en Barcelona</a>.</p>
+  <!-- /estatico:intro -->  <div class="projects-grid" id="projects-grid">
+    <a class="project-card" href="/portfolio/suzet-atelier"><img src="https://res.cloudinary.com/dmajnty6m/image/fetch/w_800,q_auto,f_auto/https://images.squarespace-cdn.com/content/v1/6596e42a7a382c0112cf48ee/1727947708445-LD26DZKU05VCFISWF482/_K6A0500-Recuperado.jpg" alt="Suzet Atelier — Fotografía de marca" loading="lazy"/><div class="project-card-overlay"></div><div class="project-card-info"><div class="project-card-title">Suzet Atelier</div></div><div class="project-card-arrow">→</div></a>
+    <a class="project-card" href="/portfolio/julia-martinez"><img src="https://res.cloudinary.com/dmajnty6m/image/fetch/w_800,q_auto,f_auto/https://images.squarespace-cdn.com/content/v1/6596e42a7a382c0112cf48ee/1705335147726-WLYN1TC98Z1IA6QPCFOY/_K6A0620ffff.jpg" alt="Julia Martinez — Retrato editorial" loading="lazy"/><div class="project-card-overlay"></div><div class="project-card-info"><div class="project-card-title">Julia Martinez</div></div><div class="project-card-arrow">→</div></a>
+    <a class="project-card" href="/portfolio/poblenou-antic"><img src="https://res.cloudinary.com/dmajnty6m/image/fetch/w_800,q_auto,f_auto/https://images.squarespace-cdn.com/content/v1/6596e42a7a382c0112cf48ee/1725441553888-9GKJJUYZ6ZIJVLIW6ST8/_K6A9237+copia.jpg" alt="Poblenou Antic — Editorial" loading="lazy"/><div class="project-card-overlay"></div><div class="project-card-info"><div class="project-card-title">Poblenou Antic</div></div><div class="project-card-arrow">→</div></a>
+    <a class="project-card" href="/portfolio/the-crazy-side"><img src="https://res.cloudinary.com/dmajnty6m/image/fetch/w_800,q_auto,f_auto/https://images.squarespace-cdn.com/content/v1/6596e42a7a382c0112cf48ee/1727862096324-JUIZQDBOLPQDU2CYDXQL/sitges+editorial11233.jpg" alt="The Crazy Side! — Editorial" loading="lazy"/><div class="project-card-overlay"></div><div class="project-card-info"><div class="project-card-title">The Crazy Side!</div></div><div class="project-card-arrow">→</div></a>
+    <a class="project-card" href="/portfolio/lemon-magazine"><img src="https://res.cloudinary.com/dmajnty6m/image/fetch/w_800,q_auto,f_auto/https://images.squarespace-cdn.com/content/v1/6596e42a7a382c0112cf48ee/1704387628115-WLFIEMPUH6OJF515C3RV/sitges_orig.jpg" alt="Lemon Magazine — Editorial — Vídeo" loading="lazy"/><div class="project-card-overlay"></div><div class="project-card-info"><div class="project-card-title">Lemon Magazine</div></div><div class="project-card-arrow">→</div></a>
+    <a class="project-card" href="/portfolio/hazzys-kids"><img src="https://res.cloudinary.com/dmajnty6m/image/fetch/w_800,q_auto,f_auto/https://images.squarespace-cdn.com/content/v1/6596e42a7a382c0112cf48ee/1727947874699-7JFCQONI01GNPI6ABP62/mg-8335_orig.jpg" alt="Hazzys Kids — Lookbook infantil" loading="lazy"/><div class="project-card-overlay"></div><div class="project-card-info"><div class="project-card-title">Hazzys Kids</div></div><div class="project-card-arrow">→</div></a>
+    <a class="project-card" href="/portfolio/lucky-try"><img src="https://res.cloudinary.com/dmajnty6m/image/fetch/w_800,q_auto,f_auto/https://images.squarespace-cdn.com/content/v1/6596e42a7a382c0112cf48ee/1727948091452-5UGDOW1008U33VTVIMVF/cuadro-luckytry_8.jpg" alt="Lucky Try — Campaña — Vídeo" loading="lazy"/><div class="project-card-overlay"></div><div class="project-card-info"><div class="project-card-title">Lucky Try</div></div><div class="project-card-arrow">→</div></a>
+    <a class="project-card" href="/portfolio/valentina-bentos"><img src="https://res.cloudinary.com/dmajnty6m/image/fetch/w_800,q_auto,f_auto/https://images.squarespace-cdn.com/content/v1/6596e42a7a382c0112cf48ee/1704703555067-ITZR50URKBBQ9R2Q1BHF/Valentina+Bentos_%40photoeloi+%282%29.jpg" alt="Valentina Bentos — Editorial de moda" loading="lazy"/><div class="project-card-overlay"></div><div class="project-card-info"><div class="project-card-title">Valentina Bentos</div></div><div class="project-card-arrow">→</div></a>
+    <a class="project-card" href="/portfolio/my-little-pony"><img src="https://res.cloudinary.com/dmajnty6m/image/fetch/w_800,q_auto,f_auto/https://images.squarespace-cdn.com/content/v1/6596e42a7a382c0112cf48ee/1704387627841-1HVJZQYEU3W1F8S11Z65/thuya-photoeloi-17-orig_orig.jpg" alt="My Little Pony by Thuya — Editorial" loading="lazy"/><div class="project-card-overlay"></div><div class="project-card-info"><div class="project-card-title">My Little Pony by Thuya</div></div><div class="project-card-arrow">→</div></a>
+    <a class="project-card" href="/portfolio/exotica-gin"><img src="https://res.cloudinary.com/dmajnty6m/image/fetch/w_800,q_auto,f_auto/https://images.squarespace-cdn.com/content/v1/6596e42a7a382c0112cf48ee/53cbdaa2-d18a-479e-b672-1d724533844c/Exotica10.jpg" alt="Exotica Gin — Campaña publicitaria" loading="lazy"/><div class="project-card-overlay"></div><div class="project-card-info"><div class="project-card-title">Exotica Gin</div></div><div class="project-card-arrow">→</div></a>
+    <a class="project-card" href="/portfolio/vip-picnic"><img src="https://res.cloudinary.com/dmajnty6m/image/fetch/w_800,q_auto,f_auto/https://images.squarespace-cdn.com/content/v1/6596e42a7a382c0112cf48ee/1727948496604-P16CU718FI1T3GQFS6KW/mg-0877_orig.jpg" alt="Vip.Picnic — Evento" loading="lazy"/><div class="project-card-overlay"></div><div class="project-card-info"><div class="project-card-title">Vip.Picnic</div></div><div class="project-card-arrow">→</div></a>
+    <a class="project-card" href="/portfolio/glenis"><img src="https://res.cloudinary.com/dmajnty6m/image/fetch/w_800,q_auto,f_auto/https://images.squarespace-cdn.com/content/v1/6596e42a7a382c0112cf48ee/1727948663963-V162XG21DIOQ8KMUVN49/glenis-swimwear-6_orig.jpg" alt="Glenis Swimwear — Nueva colección" loading="lazy"/><div class="project-card-overlay"></div><div class="project-card-info"><div class="project-card-title">Glenis Swimwear</div></div><div class="project-card-arrow">→</div></a>
+    <a class="project-card" href="/portfolio/martina-pavia"><img src="https://res.cloudinary.com/dmajnty6m/image/fetch/w_800,q_auto,f_auto/https://images.squarespace-cdn.com/content/v1/6596e42a7a382c0112cf48ee/1727948211601-64AFHI8DCXAWT7DBRYL2/martina-pavia-martinapavia-4_orig.jpg" alt="Martina Pavia — Fotografía de marca" loading="lazy"/><div class="project-card-overlay"></div><div class="project-card-info"><div class="project-card-title">Martina Pavia</div></div><div class="project-card-arrow">→</div></a>
+    <a class="project-card" href="/portfolio/dinner-at-my-house"><img src="https://res.cloudinary.com/dmajnty6m/image/fetch/w_800,q_auto,f_auto/https://images.squarespace-cdn.com/content/v1/6596e42a7a382c0112cf48ee/1704387628281-A1N1SCAVYUTN443VAGA4/mg-1965-orig_orig.jpg" alt="Dinner at My House — Editorial" loading="lazy"/><div class="project-card-overlay"></div><div class="project-card-info"><div class="project-card-title">Dinner at My House</div></div><div class="project-card-arrow">→</div></a>
+    <a class="project-card" href="/portfolio/was-swimwear"><img src="https://res.cloudinary.com/dmajnty6m/image/fetch/w_800,q_auto,f_auto/https://images.squarespace-cdn.com/content/v1/6596e42a7a382c0112cf48ee/1727948879764-GRHZOO75BYTV29U1W32U/mg-0409-orig_orig.jpg" alt="WAS Swimwear — Nueva colección" loading="lazy"/><div class="project-card-overlay"></div><div class="project-card-info"><div class="project-card-title">WAS Swimwear</div></div><div class="project-card-arrow">→</div></a>
+    <a class="project-card" href="/portfolio/billy-elliot"><img src="https://res.cloudinary.com/dmajnty6m/image/fetch/w_800,q_auto,f_auto/https://images.squarespace-cdn.com/content/v1/6596e42a7a382c0112cf48ee/1704706748232-17ACJEFL3AW1JT1YTB5Q/k6a4165_orig.jpg" alt="Billy Elliot — Editorial" loading="lazy"/><div class="project-card-overlay"></div><div class="project-card-info"><div class="project-card-title">Billy Elliot</div></div><div class="project-card-arrow">→</div></a>
+    <a class="project-card" href="/portfolio/arma-de-mujer"><img src="https://res.cloudinary.com/dmajnty6m/image/fetch/w_800,q_auto,f_auto/https://images.squarespace-cdn.com/content/v1/6596e42a7a382c0112cf48ee/1704387628673-QYES9PR7ZEDL83L6CXUC/arma-de-mujer11401-orig_orig.jpg" alt="Arma de Mujer — Editorial" loading="lazy"/><div class="project-card-overlay"></div><div class="project-card-info"><div class="project-card-title">Arma de Mujer</div></div><div class="project-card-arrow">→</div></a>
+    <a class="project-card" href="/portfolio/princess-bikinis"><img src="https://res.cloudinary.com/dmajnty6m/image/fetch/w_800,q_auto,f_auto/https://images.squarespace-cdn.com/content/v1/6596e42a7a382c0112cf48ee/1727948402052-PM6IWSSVM9LYQW51WF9Y/mg-8867_orig.jpg" alt="Princess Bikinis — Nueva colección" loading="lazy"/><div class="project-card-overlay"></div><div class="project-card-info"><div class="project-card-title">Princess Bikinis</div></div><div class="project-card-arrow">→</div></a>
+    <a class="project-card" href="/portfolio/new-year-party"><img src="https://res.cloudinary.com/dmajnty6m/image/fetch/w_800,q_auto,f_auto/https://images.squarespace-cdn.com/content/v1/6596e42a7a382c0112cf48ee/1704387627701-EPJ0QKNGPU89KAK31WDK/mg-3491-orig_orig.jpg" alt="New Year Party — Editorial" loading="lazy"/><div class="project-card-overlay"></div><div class="project-card-info"><div class="project-card-title">New Year Party</div></div><div class="project-card-arrow">→</div></a>
+    <a class="project-card" href="/portfolio/introspective-journey"><img src="https://res.cloudinary.com/dmajnty6m/image/fetch/w_800,q_auto,f_auto/https://images.squarespace-cdn.com/content/v1/6596e42a7a382c0112cf48ee/1704387628092-H6XACTTPU4UBJRT9GHKQ/mg-5865-orig_orig.jpg" alt="An Introspective Journey — Fine Art" loading="lazy"/><div class="project-card-overlay"></div><div class="project-card-info"><div class="project-card-title">An Introspective Journey</div></div><div class="project-card-arrow">→</div></a>
+    <a class="project-card" href="/portfolio/liz-swimwear"><img src="https://res.cloudinary.com/dmajnty6m/image/fetch/w_800,q_auto,f_auto/https://images.squarespace-cdn.com/content/v1/6596e42a7a382c0112cf48ee/1727948976393-X3QH3UI6LGBX3DKSZX1N/mg-7930-orig_orig.jpg" alt="Liz Swimwear · Costa Rica — Lookbook" loading="lazy"/><div class="project-card-overlay"></div><div class="project-card-info"><div class="project-card-title">Liz Swimwear · Costa Rica</div></div><div class="project-card-arrow">→</div></a>
+    <a class="project-card" href="/portfolio/gianni-versace"><img src="https://res.cloudinary.com/dmajnty6m/image/fetch/w_800,q_auto,f_auto/https://images.squarespace-cdn.com/content/v1/6596e42a7a382c0112cf48ee/ada4bf1f-efd5-42ef-8387-a689f1426bd0/%7B8E3C318E-4ADD-49BF-80B5-C5A1BCCA2D32%7D.png" alt="Gianni Versace — Retrospectiva — Vídeo" loading="lazy"/><div class="project-card-overlay"></div><div class="project-card-info"><div class="project-card-title">Gianni Versace</div></div><div class="project-card-arrow">→</div></a>
+    <a class="project-card" href="/portfolio/fete-barcelona"><img src="https://res.cloudinary.com/dmajnty6m/image/upload/q_auto/f_auto/v1781021939/_K6A5237_ep80f0.jpg" alt="Fete Barcelona — Campaña" loading="lazy"/><div class="project-card-overlay"></div><div class="project-card-info"><div class="project-card-title">Fete Barcelona</div></div><div class="project-card-arrow">→</div></a>
+    <a class="project-card" href="/portfolio/alyona-yuliya"><img src="https://res.cloudinary.com/dmajnty6m/image/fetch/w_800,q_auto,f_auto/https://images.squarespace-cdn.com/content/v1/6596e42a7a382c0112cf48ee/1704387627514-ZPZPPKL64C4GQWDTF61P/alyona-mano2-orig-orig_orig.jpg" alt="Alyona &amp; Yuliya — Editorial de moda" loading="lazy"/><div class="project-card-overlay"></div><div class="project-card-info"><div class="project-card-title">Alyona &amp; Yuliya</div></div><div class="project-card-arrow">→</div></a>
+  </div><!-- /projects-grid -->
 
   <div class="portfolio-footer">
     <span class="footer-copy" data-i18n="footer-copy">© 2026 Eloi Garcia · photoeloi.com</span>
-    <a href="contacto.html" class="footer-cta">Reservar sesión</a>
+    <a href="/contacto" class="footer-cta">Reservar sesión</a>
   </div>
 </div>
 
@@ -777,6 +807,7 @@ let lbIndex = 0;
 // Build portfolio grid
 function buildGrid(){
   const grid = document.getElementById('projects-grid');
+  grid.innerHTML='';
   projects.forEach((p,i)=>{
     const card = document.createElement('a');
     card.className='project-card';

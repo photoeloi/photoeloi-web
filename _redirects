@@ -43,11 +43,14 @@
 /corporativo/yogaone-born            /corporativo              301
 /corporativo/coco-gabriel            /corporativo              301
 /corporativo/boston-consulting-group /corporativo              301
+/corporativo/prime-professional      /corporativo              301
 
 # --- Paginas sueltas de la web antigua ---
 /home                             /                            301
 /books                            /booksreserva                301
 /bcnhostess                       /portfolio                   301
+# /servicios era la pagina de fotografia corporativa de Squarespace (sigue indexada)
+/servicios                        /corporativo                 301
 
 # Nota: /pruebas se deja en 404 a proposito. Era una pagina de pruebas
 # sin contenido equivalente; un 404 es la respuesta correcta y Google
@@ -102,6 +105,7 @@
 /corporativo.html                               /corporativo                                301!
 /ecommerce.html                                 /ecommerce                                  301!
 /estudio.html                                   /estudio                                    301!
+/fotografo-moda-barcelona.html                  /fotografo-moda-barcelona                   301!
 /index.html                                     /index                                      301!
 /interiorismo.html                              /interiorismo                               301!
 /magazine-ai-act-etiquetado-moda.html           /magazine-ai-act-etiquetado-moda            301!
