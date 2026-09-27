@@ -68,6 +68,10 @@
     .overlay-social a{display:flex;align-items:center;color:#111;opacity:.3;transition:opacity .25s}
     .overlay-social a:hover{opacity:1}
     .overlay-social svg{width:18px;height:18px;fill:currentColor}
+    .lang-btn{background:none;border:none;display:inline-flex;align-items:center;gap:5px;font-size:9px;letter-spacing:.15em;font-family:var(--sans);color:rgba(0,0,0,.45);padding:0;margin-right:16px;transition:color .25s}
+    .lang-btn:hover{color:var(--accent)}
+    .lang-btn svg{width:13px;height:13px;fill:currentColor;flex-shrink:0}
+    @media(max-width:768px){.lang-btn{display:none}.lang-btn--overlay{display:inline-flex!important;font-size:14px!important;letter-spacing:.2em!important;color:rgba(0,0,0,.5)!important;margin:20px auto 0!important}.lang-btn--overlay svg{width:18px!important;height:18px!important}.lang-btn--overlay .lang-current{font-size:14px!important}}
 
     /* HERO */
     .page-hero{margin-top:68px;padding:80px 64px 72px;border-bottom:1px solid var(--border);display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:end}
@@ -167,39 +171,46 @@
     }
   </style>
 </head>
-<body>
+<body data-page="booksreserva">
 
 <nav>
   <ul class="nav-links">
-    <li><a href="/">Home</a></li>
-    <li><a href="/portfolio">Portfolio</a></li>
-    <li><a href="/magazine">Magazine</a></li>
-    <li><a href="/ecommerce">IA · Ecommerce</a></li>
-    <li><a href="/estudio">Estudio</a></li>
-    <li><a href="/contacto">Contacto</a></li>
+    <li><a href="/" data-i18n="nav-home">Home</a></li>
+    <li><a href="/portfolio" data-i18n="nav-portfolio">Portfolio</a></li>
+    <li><a href="/magazine" data-i18n="nav-magazine">Magazine</a></li>
+    <li><a href="/ecommerce" data-i18n="nav-ecommerce">IA · Ecommerce</a></li>
+    <li><a href="/estudio" data-i18n="nav-estudio">Estudio</a></li>
+    <li><a href="/contacto" data-i18n="nav-contacto">Contacto</a></li>
   </ul>
   <a href="/" class="nav-logo"><em>Eloi</em> Garcia</a>
   <div class="nav-right">
     <ul class="nav-social">
       <li><a href="https://instagram.com/photoeloi" target="_blank" title="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a></li>
+      <li><a href="https://linkedin.com" target="_blank" title="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a></li>
       <li><a href="https://vimeo.com/user185593708" target="_blank" title="Vimeo"><svg viewBox="0 0 24 24"><path d="M23.977 6.416c-.105 2.338-1.739 5.543-4.894 9.609-3.268 4.247-6.026 6.37-8.29 6.37-1.409 0-2.578-1.294-3.553-3.881L5.322 11.4C4.603 8.816 3.834 7.522 3.01 7.522c-.179 0-.806.378-1.881 1.132L0 7.197c1.185-1.044 2.351-2.084 3.501-3.128C5.08 2.701 6.266 1.984 7.055 1.91c1.867-.18 3.016 1.1 3.447 3.838.465 2.953.789 4.789.971 5.507.539 2.45 1.131 3.674 1.776 3.674.502 0 1.256-.796 2.265-2.385 1.004-1.589 1.54-2.797 1.612-3.628.144-1.371-.395-2.061-1.614-2.061-.574 0-1.167.121-1.777.391 1.186-3.868 3.434-5.757 6.762-5.637 2.473.06 3.628 1.664 3.48 4.807l-.001.045z"/></svg></a></li>
+      <li><a href="https://www.behance.net/photoeloi" target="_blank" title="Behance"><svg viewBox="0 0 24 24"><path d="M6.938 4.503c.702 0 1.34.06 1.92.188.577.13 1.07.33 1.485.604.408.271.729.625.96 1.057.227.43.34.958.34 1.58 0 .68-.154 1.248-.463 1.7-.31.453-.753.816-1.337 1.094.804.232 1.407.645 1.802 1.227.395.582.595 1.284.595 2.108 0 .688-.13 1.286-.388 1.795-.258.51-.615.934-1.072 1.276-.457.34-.99.595-1.59.765-.6.172-1.228.258-1.884.258H0V4.503h6.938zm-.495 5.47c.508 0 .925-.107 1.253-.32.326-.213.49-.57.49-1.07 0-.286-.053-.523-.154-.712-.1-.19-.242-.34-.416-.45-.174-.11-.378-.19-.608-.237-.23-.048-.475-.072-.732-.072H3.14v2.86h3.303zm.116 5.683c.29 0 .562-.03.818-.085.255-.054.476-.146.662-.274.186-.13.335-.307.445-.534.11-.226.165-.516.165-.872 0-.692-.192-1.181-.578-1.468-.387-.286-.896-.43-1.528-.43H3.14v3.663h3.42zm9.17.91c.34.332.826.498 1.456.498.454 0 .843-.11 1.172-.336.328-.225.53-.462.604-.71h2.374c-.38 1.178-1.006 2.015-1.87 2.515-.866.5-1.906.75-3.12.75-.85 0-1.614-.134-2.295-.404-.682-.27-1.255-.655-1.725-1.154-.47-.498-.83-1.093-1.086-1.785-.257-.693-.386-1.455-.386-2.29 0-.806.134-1.556.403-2.25.268-.694.64-1.294 1.12-1.8.48-.506 1.054-.9 1.72-1.184.67-.285 1.41-.427 2.222-.427.908 0 1.7.175 2.38.524.677.35 1.232.818 1.66 1.41.426.59.73 1.265.91 2.022.18.756.235 1.553.165 2.395H15.73c0 .694.17 1.246.51 1.578l-.001.001zm2.625-5.26c-.275-.302-.69-.453-1.245-.453-.363 0-.665.063-.905.19-.24.128-.433.284-.58.47-.148.188-.253.39-.315.606-.062.216-.1.418-.11.604h3.623c-.08-.623-.29-1.115-.468-1.417z"/></svg></a></li>
     </ul>
+    <button class="lang-btn"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg><span class="lang-current">EN</span></button>
+
     <button class="nav-burger" id="navBurger"><span></span><span></span><span></span></button>
   </div>
 </nav>
 
 <div class="nav-overlay" id="navOverlay">
   <ul class="overlay-links">
-    <li><a href="/">Home</a></li>
-    <li><a href="/portfolio">Portfolio</a></li>
-    <li><a href="/magazine">Magazine</a></li>
-    <li><a href="/ecommerce">IA · Ecommerce</a></li>
-    <li><a href="/estudio">Estudio</a></li>
-    <li><a href="/contacto">Contacto</a></li>
+    <li><a href="/" data-i18n="nav-home">Home</a></li>
+    <li><a href="/portfolio" data-i18n="nav-portfolio">Portfolio</a></li>
+    <li><a href="/magazine" data-i18n="nav-magazine">Magazine</a></li>
+    <li><a href="/ecommerce" data-i18n="nav-ecommerce">IA · Ecommerce</a></li>
+    <li><a href="/estudio" data-i18n="nav-estudio">Estudio</a></li>
+    <li><a href="/contacto" data-i18n="nav-contacto">Contacto</a></li>
   </ul>
+  <button class="lang-btn lang-btn--overlay" style="margin:24px auto 0;color:rgba(0,0,0,.5);font-size:10px;letter-spacing:.2em"><svg viewBox="0 0 24 24" style="width:14px;height:14px;fill:currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg><span class="lang-current">EN</span></button>
   <ul class="overlay-social">
-    <li><a href="https://instagram.com/photoeloi" target="_blank"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a></li>
-    <li><a href="https://vimeo.com/user185593708" target="_blank"><svg viewBox="0 0 24 24"><path d="M23.977 6.416c-.105 2.338-1.739 5.543-4.894 9.609-3.268 4.247-6.026 6.37-8.29 6.37-1.409 0-2.578-1.294-3.553-3.881L5.322 11.4C4.603 8.816 3.834 7.522 3.01 7.522c-.179 0-.806.378-1.881 1.132L0 7.197c1.185-1.044 2.351-2.084 3.501-3.128C5.08 2.701 6.266 1.984 7.055 1.91c1.867-.18 3.016 1.1 3.447 3.838.465 2.953.789 4.789.971 5.507.539 2.45 1.131 3.674 1.776 3.674.502 0 1.256-.796 2.265-2.385 1.004-1.589 1.54-2.797 1.612-3.628.144-1.371-.395-2.061-1.614-2.061-.574 0-1.167.121-1.777.391 1.186-3.868 3.434-5.757 6.762-5.637 2.473.06 3.628 1.664 3.48 4.807l-.001.045z"/></svg></a></li>
+    <li><a href="https://instagram.com/photoeloi" target="_blank" title="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a></li>
+    <li><a href="https://linkedin.com" target="_blank" title="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a></li>
+    <li><a href="https://vimeo.com/user185593708" target="_blank" title="Vimeo"><svg viewBox="0 0 24 24"><path d="M23.977 6.416c-.105 2.338-1.739 5.543-4.894 9.609-3.268 4.247-6.026 6.37-8.29 6.37-1.409 0-2.578-1.294-3.553-3.881L5.322 11.4C4.603 8.816 3.834 7.522 3.01 7.522c-.179 0-.806.378-1.881 1.132L0 7.197c1.185-1.044 2.351-2.084 3.501-3.128C5.08 2.701 6.266 1.984 7.055 1.91c1.867-.18 3.016 1.1 3.447 3.838.465 2.953.789 4.789.971 5.507.539 2.45 1.131 3.674 1.776 3.674.502 0 1.256-.796 2.265-2.385 1.004-1.589 1.54-2.797 1.612-3.628.144-1.371-.395-2.061-1.614-2.061-.574 0-1.167.121-1.777.391 1.186-3.868 3.434-5.757 6.762-5.637 2.473.06 3.628 1.664 3.48 4.807l-.001.045z"/></svg></a></li>
+    <li><a href="https://www.behance.net/photoeloi" target="_blank" title="Behance"><svg viewBox="0 0 24 24"><path d="M6.938 4.503c.702 0 1.34.06 1.92.188.577.13 1.07.33 1.485.604.408.271.729.625.96 1.057.227.43.34.958.34 1.58 0 .68-.154 1.248-.463 1.7-.31.453-.753.816-1.337 1.094.804.232 1.407.645 1.802 1.227.395.582.595 1.284.595 2.108 0 .688-.13 1.286-.388 1.795-.258.51-.615.934-1.072 1.276-.457.34-.99.595-1.59.765-.6.172-1.228.258-1.884.258H0V4.503h6.938zm-.495 5.47c.508 0 .925-.107 1.253-.32.326-.213.49-.57.49-1.07 0-.286-.053-.523-.154-.712-.1-.19-.242-.34-.416-.45-.174-.11-.378-.19-.608-.237-.23-.048-.475-.072-.732-.072H3.14v2.86h3.303zm.116 5.683c.29 0 .562-.03.818-.085.255-.054.476-.146.662-.274.186-.13.335-.307.445-.534.11-.226.165-.516.165-.872 0-.692-.192-1.181-.578-1.468-.387-.286-.896-.43-1.528-.43H3.14v3.663h3.42zm9.17.91c.34.332.826.498 1.456.498.454 0 .843-.11 1.172-.336.328-.225.53-.462.604-.71h2.374c-.38 1.178-1.006 2.015-1.87 2.515-.866.5-1.906.75-3.12.75-.85 0-1.614-.134-2.295-.404-.682-.27-1.255-.655-1.725-1.154-.47-.498-.83-1.093-1.086-1.785-.257-.693-.386-1.455-.386-2.29 0-.806.134-1.556.403-2.25.268-.694.64-1.294 1.12-1.8.48-.506 1.054-.9 1.72-1.184.67-.285 1.41-.427 2.222-.427.908 0 1.7.175 2.38.524.677.35 1.232.818 1.66 1.41.426.59.73 1.265.91 2.022.18.756.235 1.553.165 2.395H15.73c0 .694.17 1.246.51 1.578l-.001.001zm2.625-5.26c-.275-.302-.69-.453-1.245-.453-.363 0-.665.063-.905.19-.24.128-.433.284-.58.47-.148.188-.253.39-.315.606-.062.216-.1.418-.11.604h3.623c-.08-.623-.29-1.115-.468-1.417z"/></svg></a></li>
   </ul>
 </div>
 
@@ -207,17 +218,17 @@
 <div class="page-hero">
   <div class="fade-up">
     <span class="hero-label">Barcelona · Estudio propio · Poble-Nou</span>
-    <h1 class="hero-title">Books &<br><em>Reservas</em></h1>
+    <h1 class="hero-title" data-i18n-html="br-title">Books &<br><em>Reservas</em></h1>
   </div>
   <div class="fade-up" style="transition-delay:.15s">
-    <p class="hero-desc">Sesiones fotográficas profesionales en nuestro estudio de Barcelona. Elige el pack que mejor se adapte a ti y reserva directamente.</p>
+    <p data-i18n="br-desc" class="hero-desc">Sesiones fotográficas profesionales en nuestro estudio de Barcelona. Elige el pack que mejor se adapte a ti y reserva directamente.</p>
     <div class="hero-includes">
-      <p class="hero-includes-title">Todas las sesiones incluyen</p>
+      <p data-i18n="br-inc-title" class="hero-includes-title">Todas las sesiones incluyen</p>
       <ul>
-        <li>Varios fondos y escenografías disponibles</li>
-        <li>Guía en posado y dirección durante la sesión</li>
-        <li>Revelado digital de todas las fotos</li>
-        <li>Entrega en alta resolución</li>
+        <li data-i18n="br-inc-1">Varios fondos y escenografías disponibles</li>
+        <li data-i18n="br-inc-2">Guía en posado y dirección durante la sesión</li>
+        <li data-i18n="br-inc-3">Revelado digital de todas las fotos</li>
+        <li data-i18n="br-inc-4">Entrega en alta resolución</li>
       </ul>
     </div>
   </div>
@@ -235,46 +246,46 @@
   <div class="bloque-header">
     <div>
       <span class="bloque-num">01</span>
-      <h2 class="bloque-title">Books Personales,<br><em>Familiares o Parejas</em></h2>
+      <h2 class="bloque-title" data-i18n-html="br-b1-title">Books Personales,<br><em>Familiares o Parejas</em></h2>
     </div>
-    <p class="bloque-desc">Sesiones diseñadas para capturar tu personalidad y tus vínculos más especiales. En estudio con iluminación profesional y múltiples escenografías.</p>
+    <p class="bloque-desc" data-i18n="br-b1-desc">Sesiones diseñadas para capturar tu personalidad y tus vínculos más especiales. En estudio con iluminación profesional y múltiples escenografías.</p>
   </div>
   <div class="packs-grid">
     <div class="pack">
-      <p class="pack-name">Basic</p>
+      <p class="pack-name" data-i18n="br-b1-p1-name">Basic</p>
       <div class="pack-price"><sup>€</sup>150</div>
-      <p class="pack-duration">1 hora de sesión</p>
+      <p class="pack-duration" data-i18n="br-b1-p1-dur">1 hora de sesión</p>
       <ul class="pack-list">
-        <li>1 cambio de vestuario</li>
-        <li>Revelado digital de todas las fotos</li>
-        <li>Varios fondos disponibles</li>
-        <li>Guía en posado incluida</li>
+        <li data-i18n="br-b1-p1-l1">1 cambio de vestuario</li>
+        <li data-i18n="br-b1-p1-l2">Revelado digital de todas las fotos</li>
+        <li data-i18n="br-b1-p1-l3">Varios fondos disponibles</li>
+        <li data-i18n="br-b1-p1-l4">Guía en posado incluida</li>
       </ul>
-      <a href="https://wa.me/34699275789?text=Hola%20Eloi%2C%20quiero%20reservar%20el%20Book%20Basic%20Personal%20(150%E2%82%AC)" target="_blank" class="btn-reservar">Reservar →</a>
+      <a href="https://wa.me/34699275789?text=Hola%20Eloi%2C%20quiero%20reservar%20el%20Book%20Basic%20Personal%20(150%E2%82%AC)" target="_blank" class="btn-reservar" data-i18n="br-reservar">Reservar →</a>
     </div>
     <div class="pack pack-highlight">
-      <p class="pack-name">Pro</p>
+      <p class="pack-name" data-i18n="br-b1-p2-name">Pro</p>
       <div class="pack-price"><sup>€</sup>250</div>
-      <p class="pack-duration">1 hora de sesión</p>
+      <p class="pack-duration" data-i18n="br-b1-p2-dur">1 hora de sesión</p>
       <ul class="pack-list">
-        <li>3 cambios de vestuario</li>
-        <li>5 fotos con retoque profesional incluido</li>
-        <li>Revelado digital completo</li>
-        <li>Varios fondos y escenografías</li>
+        <li data-i18n="br-b1-p2-l1">3 cambios de vestuario</li>
+        <li data-i18n="br-b1-p2-l2">5 fotos con retoque profesional incluido</li>
+        <li data-i18n="br-b1-p2-l3">Revelado digital completo</li>
+        <li data-i18n="br-b1-p2-l4">Varios fondos y escenografías</li>
       </ul>
-      <a href="https://wa.me/34699275789?text=Hola%20Eloi%2C%20quiero%20reservar%20el%20Book%20Pro%20Personal%20(250%E2%82%AC)" target="_blank" class="btn-reservar">Reservar →</a>
+      <a href="https://wa.me/34699275789?text=Hola%20Eloi%2C%20quiero%20reservar%20el%20Book%20Pro%20Personal%20(250%E2%82%AC)" target="_blank" class="btn-reservar" data-i18n="br-reservar">Reservar →</a>
     </div>
     <div class="pack">
-      <p class="pack-name">Premium</p>
+      <p class="pack-name" data-i18n="br-b1-p3-name">Premium</p>
       <div class="pack-price"><sup>€</sup>350</div>
-      <p class="pack-duration">2 horas de sesión</p>
+      <p class="pack-duration" data-i18n="br-b1-p3-dur">2 horas de sesión</p>
       <ul class="pack-list">
-        <li>4 cambios de vestuario</li>
-        <li>10 fotos con retoque profesional incluido</li>
-        <li>Revelado digital completo</li>
-        <li>Acceso a todos los fondos y escenografías</li>
+        <li data-i18n="br-b1-p3-l1">4 cambios de vestuario</li>
+        <li data-i18n="br-b1-p3-l2">10 fotos con retoque profesional incluido</li>
+        <li data-i18n="br-b1-p3-l3">Revelado digital completo</li>
+        <li data-i18n="br-b1-p3-l4">Acceso a todos los fondos y escenografías</li>
       </ul>
-      <a href="https://wa.me/34699275789?text=Hola%20Eloi%2C%20quiero%20reservar%20el%20Book%20Premium%20Personal%20(350%E2%82%AC)" target="_blank" class="btn-reservar">Reservar →</a>
+      <a href="https://wa.me/34699275789?text=Hola%20Eloi%2C%20quiero%20reservar%20el%20Book%20Premium%20Personal%20(350%E2%82%AC)" target="_blank" class="btn-reservar" data-i18n="br-reservar">Reservar →</a>
     </div>
   </div>
 </div>
@@ -284,46 +295,46 @@
   <div class="bloque-header">
     <div>
       <span class="bloque-num">02</span>
-      <h2 class="bloque-title">Marca Personal,<br><em>Artistas y Profesionales</em></h2>
+      <h2 class="bloque-title" data-i18n-html="br-b2-title">Marca Personal,<br><em>Artistas y Profesionales</em></h2>
     </div>
-    <p class="bloque-desc">Imágenes que comunican tu propuesta de valor. Para freelancers, artistas, coaches, influencers y cualquier profesional que necesite una imagen potente.</p>
+    <p class="bloque-desc" data-i18n="br-b2-desc">Imágenes que comunican tu propuesta de valor. Para freelancers, artistas, coaches, influencers y cualquier profesional que necesite una imagen potente.</p>
   </div>
   <div class="packs-grid">
     <div class="pack">
-      <p class="pack-name">Basic</p>
+      <p class="pack-name" data-i18n="br-b2-p1-name">Basic</p>
       <div class="pack-price"><sup>€</sup>150</div>
-      <p class="pack-duration">1 hora de sesión</p>
+      <p class="pack-duration" data-i18n="br-b2-p1-dur">1 hora de sesión</p>
       <ul class="pack-list">
-        <li>2 cambios de vestuario</li>
-        <li>5 fotos retocadas profesionalmente</li>
-        <li>Revelado digital completo</li>
-        <li>Orientación sobre looks y posado</li>
+        <li data-i18n="br-b2-p1-l1">2 cambios de vestuario</li>
+        <li data-i18n="br-b2-p1-l2">5 fotos retocadas profesionalmente</li>
+        <li data-i18n="br-b2-p1-l3">Revelado digital completo</li>
+        <li data-i18n="br-b2-p1-l4">Orientación sobre looks y posado</li>
       </ul>
-      <a href="https://wa.me/34699275789?text=Hola%20Eloi%2C%20quiero%20reservar%20el%20pack%20Basic%20Marca%20Personal%20(150%E2%82%AC)" target="_blank" class="btn-reservar">Reservar →</a>
+      <a href="https://wa.me/34699275789?text=Hola%20Eloi%2C%20quiero%20reservar%20el%20pack%20Basic%20Marca%20Personal%20(150%E2%82%AC)" target="_blank" class="btn-reservar" data-i18n="br-reservar">Reservar →</a>
     </div>
     <div class="pack pack-highlight">
-      <p class="pack-name">Pro</p>
+      <p class="pack-name" data-i18n="br-b2-p2-name">Pro</p>
       <div class="pack-price"><sup>€</sup>350</div>
-      <p class="pack-duration">2 horas de sesión</p>
+      <p class="pack-duration" data-i18n="br-b2-p2-dur">2 horas de sesión</p>
       <ul class="pack-list">
-        <li>3 cambios de vestuario</li>
-        <li>10 fotos con retoque profesional</li>
-        <li>Revelado digital completo</li>
-        <li>Orientación de imagen y posado</li>
+        <li data-i18n="br-b2-p2-l1">3 cambios de vestuario</li>
+        <li data-i18n="br-b2-p2-l2">10 fotos con retoque profesional</li>
+        <li data-i18n="br-b2-p2-l3">Revelado digital completo</li>
+        <li data-i18n="br-b2-p2-l4">Orientación de imagen y posado</li>
       </ul>
-      <a href="https://wa.me/34699275789?text=Hola%20Eloi%2C%20quiero%20reservar%20el%20pack%20Pro%20Marca%20Personal%20(350%E2%82%AC)" target="_blank" class="btn-reservar">Reservar →</a>
+      <a href="https://wa.me/34699275789?text=Hola%20Eloi%2C%20quiero%20reservar%20el%20pack%20Pro%20Marca%20Personal%20(350%E2%82%AC)" target="_blank" class="btn-reservar" data-i18n="br-reservar">Reservar →</a>
     </div>
     <div class="pack">
-      <p class="pack-name">Premium</p>
+      <p class="pack-name" data-i18n="br-b2-p3-name">Premium</p>
       <div class="pack-price"><sup>€</sup>500</div>
-      <p class="pack-duration">3 horas de sesión</p>
+      <p class="pack-duration" data-i18n="br-b2-p3-dur">3 horas de sesión</p>
       <ul class="pack-list">
-        <li>4 cambios de vestuario</li>
-        <li>15 fotos con retoque profesional</li>
-        <li>1 vídeo corto incluido</li>
-        <li>Revelado digital completo</li>
+        <li data-i18n="br-b2-p3-l1">4 cambios de vestuario</li>
+        <li data-i18n="br-b2-p3-l2">15 fotos con retoque profesional</li>
+        <li data-i18n="br-b2-p3-l3">1 vídeo corto incluido</li>
+        <li data-i18n="br-b2-p3-l4">Revelado digital completo</li>
       </ul>
-      <a href="https://wa.me/34699275789?text=Hola%20Eloi%2C%20quiero%20reservar%20el%20pack%20Premium%20Marca%20Personal%20(500%E2%82%AC)" target="_blank" class="btn-reservar">Reservar →</a>
+      <a href="https://wa.me/34699275789?text=Hola%20Eloi%2C%20quiero%20reservar%20el%20pack%20Premium%20Marca%20Personal%20(500%E2%82%AC)" target="_blank" class="btn-reservar" data-i18n="br-reservar">Reservar →</a>
     </div>
   </div>
 </div>
@@ -333,46 +344,46 @@
   <div class="bloque-header">
     <div>
       <span class="bloque-num">03</span>
-      <h2 class="bloque-title">Retratos<br><em>Corporativos · CV</em></h2>
+      <h2 class="bloque-title" data-i18n-html="br-b3-title">Retratos<br><em>Corporativos · CV</em></h2>
     </div>
-    <p class="bloque-desc">Fotografía profesional para LinkedIn, currículum y comunicación corporativa. Rápida, elegante y con resultado garantizado.</p>
+    <p class="bloque-desc" data-i18n="br-b3-desc">Fotografía profesional para LinkedIn, currículum y comunicación corporativa. Rápida, elegante y con resultado garantizado.</p>
   </div>
   <div class="packs-grid">
     <div class="pack">
-      <p class="pack-name">Currículum · LinkedIn</p>
+      <p class="pack-name" data-i18n="br-b3-p1-name">Currículum · LinkedIn</p>
       <div class="pack-price"><sup>€</sup>100</div>
-      <p class="pack-duration">30 minutos</p>
+      <p class="pack-duration" data-i18n="br-b3-p1-dur">30 minutos</p>
       <ul class="pack-list">
-        <li>5 fotos retocadas profesionalmente</li>
-        <li>Fondo neutro profesional</li>
-        <li>Entrega en 24–48h</li>
-        <li>Formato optimizado para LinkedIn y CV</li>
+        <li data-i18n="br-b3-p1-l1">5 fotos retocadas profesionalmente</li>
+        <li data-i18n="br-b3-p1-l2">Fondo neutro profesional</li>
+        <li data-i18n="br-b3-p1-l3">Entrega en 24–48h</li>
+        <li data-i18n="br-b3-p1-l4">Formato optimizado para LinkedIn y CV</li>
       </ul>
-      <a href="https://wa.me/34699275789?text=Hola%20Eloi%2C%20quiero%20reservar%20el%20pack%20Curr%C3%ADculum%20LinkedIn%20(100%E2%82%AC)" target="_blank" class="btn-reservar">Reservar →</a>
+      <a href="https://wa.me/34699275789?text=Hola%20Eloi%2C%20quiero%20reservar%20el%20pack%20Curr%C3%ADculum%20LinkedIn%20(100%E2%82%AC)" target="_blank" class="btn-reservar" data-i18n="br-reservar">Reservar →</a>
     </div>
     <div class="pack pack-highlight">
-      <p class="pack-name">Corporativo · CEO</p>
+      <p class="pack-name" data-i18n="br-b3-p2-name">Corporativo · CEO</p>
       <div class="pack-price"><sup>€</sup>150</div>
-      <p class="pack-duration">45 minutos</p>
+      <p class="pack-duration" data-i18n="br-b3-p2-dur">45 minutos</p>
       <ul class="pack-list">
-        <li>2 cambios de vestuario</li>
-        <li>8 fotos retocadas profesionalmente</li>
-        <li>Varios fondos disponibles</li>
-        <li>Entrega en 24–48h</li>
+        <li data-i18n="br-b3-p2-l1">2 cambios de vestuario</li>
+        <li data-i18n="br-b3-p2-l2">8 fotos retocadas profesionalmente</li>
+        <li data-i18n="br-b3-p2-l3">Varios fondos disponibles</li>
+        <li data-i18n="br-b3-p2-l4">Entrega en 24–48h</li>
       </ul>
-      <a href="https://wa.me/34699275789?text=Hola%20Eloi%2C%20quiero%20reservar%20el%20pack%20Corporativo%20CEO%20(150%E2%82%AC)" target="_blank" class="btn-reservar">Reservar →</a>
+      <a href="https://wa.me/34699275789?text=Hola%20Eloi%2C%20quiero%20reservar%20el%20pack%20Corporativo%20CEO%20(150%E2%82%AC)" target="_blank" class="btn-reservar" data-i18n="br-reservar">Reservar →</a>
     </div>
     <div class="pack">
-      <p class="pack-name">CEO y Equipo</p>
+      <p class="pack-name" data-i18n="br-b3-p3-name">CEO y Equipo</p>
       <div class="pack-price"><sup>€</sup>350</div>
-      <p class="pack-duration">1 hora</p>
+      <p class="pack-duration" data-i18n="br-b3-p3-dur">1 hora</p>
       <ul class="pack-list">
-        <li>Sesión para CEO + hasta 4 personas del equipo</li>
-        <li>10 fotos retocadas (individuales y grupales)</li>
-        <li>Varios fondos disponibles</li>
-        <li>Entrega en 24–48h</li>
+        <li data-i18n="br-b3-p3-l1">Sesión para CEO + hasta 4 personas del equipo</li>
+        <li data-i18n="br-b3-p3-l2">10 fotos retocadas (individuales y grupales)</li>
+        <li data-i18n="br-b3-p3-l3">Varios fondos disponibles</li>
+        <li data-i18n="br-b3-p3-l4">Entrega en 24–48h</li>
       </ul>
-      <a href="https://wa.me/34699275789?text=Hola%20Eloi%2C%20quiero%20reservar%20el%20pack%20CEO%20y%20Equipo%20(350%E2%82%AC)" target="_blank" class="btn-reservar">Reservar →</a>
+      <a href="https://wa.me/34699275789?text=Hola%20Eloi%2C%20quiero%20reservar%20el%20pack%20CEO%20y%20Equipo%20(350%E2%82%AC)" target="_blank" class="btn-reservar" data-i18n="br-reservar">Reservar →</a>
     </div>
   </div>
 </div>
@@ -380,22 +391,20 @@
 <!-- CTA -->
 <div class="cta-section fade-up">
   <div class="cta-inner">
-    <span class="cta-label">¿Tienes dudas?</span>
-    <h2 class="cta-title">Hablamos antes<br>de <em>reservar</em></h2>
-    <p class="cta-desc">Si no sabes qué pack encaja mejor contigo, escríbeme. Te asesoro sin compromiso y preparamos juntos la sesión perfecta.</p>
+    <span data-i18n="br-cta-label" class="cta-label">¿Tienes dudas?</span>
+    <h2 class="cta-title" data-i18n-html="br-cta-title">Hablamos antes<br>de <em>reservar</em></h2>
+    <p data-i18n="br-cta-desc" class="cta-desc">Si no sabes qué pack encaja mejor contigo, escríbeme. Te asesoro sin compromiso y preparamos juntos la sesión perfecta.</p>
     <div class="cta-buttons">
-      <a href="https://wa.me/34699275789?text=Hola%20Eloi%2C%20me%20interesa%20reservar%20una%20sesi%C3%B3n%20fotogr%C3%A1fica" target="_blank" class="btn-primary">WhatsApp directo</a>
-      <a href="/contacto" class="btn-secondary">Enviar email</a>
+      <a data-i18n="cta-btn1" href="https://wa.me/34699275789?text=Hola%20Eloi%2C%20me%20interesa%20reservar%20una%20sesi%C3%B3n%20fotogr%C3%A1fica" target="_blank" class="btn-primary">WhatsApp directo</a>
+      <a data-i18n="cta-btn2" href="/contacto" class="btn-secondary">Enviar email</a>
     </div>
   </div>
 </div>
 
 <footer>
-  <span class="footer-copy">© 2026 Eloi Garcia · photoeloi.com</span>
+  <span data-i18n="footer-copy" class="footer-copy">© 2026 Eloi Garcia · photoeloi.com</span>
   <div class="footer-social">
-    <a href="https://instagram.com/photoeloi" target="_blank">Instagram</a>
-    <a href="/estudio">Estudio</a>
-    <a href="/contacto">Contacto</a>
+    <a href="https://instagram.com/photoeloi" target="_blank">Instagram</a><a href="https://linkedin.com/in/eloigracia" target="_blank">LinkedIn</a><a href="https://www.behance.net/photoeloi" target="_blank">Behance</a><a href="https://vimeo.com/user185593708" target="_blank">Vimeo</a>
   </div>
 </footer>
 
