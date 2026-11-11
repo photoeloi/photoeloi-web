@@ -72,14 +72,16 @@
         'ec-page-title':'Fotografía de Producto<br>para Ecommerce con<br><em>Inteligencia Artificial</em>',
         'ec-page-desc':'Soy Eloi Garcia, fotógrafo profesional en Barcelona especializado en fotografía de producto para ecommerce que combina técnicas fotográficas tradicionales con inteligencia artificial (IA). Trabajo con marcas y tiendas online para crear imágenes de catálogo que venden, con modelos virtuales, múltiples ángulos y contenido visual optimizado para plataformas digitales.',
         'ec-page-tag2':'Innovación en fotografía de producto para ecommerce',
-        'ec-page-h2':'Fotografía de producto con<br><em>IA y modelos virtuales</em>'
+        'ec-page-h2':'Fotografía de producto con<br><em>IA y modelos virtuales</em>',
+        'ec-iaescala':'Cuando el catálogo es grande —cientos de referencias que tienen que salir con la misma luz y la misma dirección de arte— trabajo con <a href="https://iaescalapro.com/generacion-de-imagenes-por-lotes/">IA ESCALA PRO, generación de imágenes de producto por lotes</a>.'
       },
       en: {
         'ec-page-tag':'Product Photography · Artificial Intelligence',
         'ec-page-title':'Product Photography<br>for Ecommerce with<br><em>Artificial Intelligence</em>',
         'ec-page-desc':'Specialist in Barcelona in product photography for ecommerce combining traditional techniques with artificial intelligence, virtual models and catalogue image optimisation.',
         'ec-page-tag2':'Innovation in ecommerce product photography',
-        'ec-page-h2':'Product photography with<br><em>AI and virtual models</em>'
+        'ec-page-h2':'Product photography with<br><em>AI and virtual models</em>',
+        'ec-iaescala':'When the catalogue is large —hundreds of SKUs that have to come out with the same light and the same art direction— I work with <a href="https://iaescalapro.com/generacion-de-imagenes-por-lotes/">IA ESCALA PRO, batch product image generation</a>.'
       }
     },
     booksreserva: {
