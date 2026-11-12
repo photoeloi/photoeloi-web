@@ -480,21 +480,31 @@
       object-position: 100% 50%;
       transition: transform 0.7s ease;
     }
-    .ec-teaser-content {
-      position: relative;
-      z-index: 1;
+    #ecommerce::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
       width: 46%;
-      padding: 80px 64px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      min-height: 560px;
+      z-index: 1;
+      pointer-events: none;
       background: linear-gradient(to right,
         rgba(10,10,10,0.97) 0%,
         rgba(10,10,10,0.9) 38%,
         rgba(10,10,10,0.42) 62%,
         rgba(10,10,10,0.1) 85%,
         transparent 100%);
+    }
+    .ec-teaser-content {
+      position: relative;
+      z-index: 2;
+      width: 46%;
+      padding: 80px 64px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 560px;
     }
     .ec-teaser-tag {
       font-size: 10px;
@@ -667,6 +677,7 @@
       section { padding: 80px 32px; }
       #estudio { grid-template-columns: 1fr; gap: 48px; padding: 80px 32px; }
       #ecommerce { padding: 0; }
+      #ecommerce::before { width: 62%; }
       .ec-teaser-content { width: 62%; padding: 64px 48px; }
       .footer-top { grid-template-columns: 1fr 1fr; gap: 40px; }
     }
@@ -682,14 +693,17 @@
       .photo-row-item:nth-child(n+5) { display: none; }
       .magazine-grid { grid-template-columns: 1fr; }
       #ecommerce { min-height: 480px; }
-      .ec-teaser-content {
+      #ecommerce::before {
         width: 100%;
-        padding: 48px 24px 64px;
-        min-height: 480px;
         background: linear-gradient(to bottom,
           rgba(10,10,10,0.85) 0%,
           rgba(10,10,10,0.7) 60%,
           rgba(10,10,10,0.4) 100%);
+      }
+      .ec-teaser-content {
+        width: 100%;
+        padding: 48px 24px 64px;
+        min-height: 480px;
       }
       .footer-top { grid-template-columns: 1fr; gap: 32px; }
       .footer-bottom { flex-direction: column; gap: 20px; text-align: center; }
