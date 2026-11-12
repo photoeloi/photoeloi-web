@@ -448,7 +448,8 @@
     /* IA Ecommerce Teaser */
     #ecommerce {
       position: relative;
-      min-height: 420px;
+      min-height: 560px;
+      height: calc(100vw / 3.47);
       overflow: hidden;
       padding: 0;
       cursor: pointer;
@@ -476,23 +477,23 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: 100% 100%;
+      object-position: 100% 50%;
       transition: transform 0.7s ease;
     }
     .ec-teaser-content {
       position: relative;
       z-index: 1;
-      width: 55%;
+      width: 46%;
       padding: 80px 64px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       min-height: 560px;
       background: linear-gradient(to right,
-        rgba(10,10,10,1) 0%,
-        rgba(10,10,10,0.98) 35%,
-        rgba(10,10,10,0.7) 60%,
-        rgba(10,10,10,0.15) 85%,
+        rgba(10,10,10,0.97) 0%,
+        rgba(10,10,10,0.9) 38%,
+        rgba(10,10,10,0.42) 62%,
+        rgba(10,10,10,0.1) 85%,
         transparent 100%);
     }
     .ec-teaser-tag {
@@ -666,7 +667,7 @@
       section { padding: 80px 32px; }
       #estudio { grid-template-columns: 1fr; gap: 48px; padding: 80px 32px; }
       #ecommerce { padding: 0; }
-      .ec-teaser-content { width: 70%; padding: 64px 48px; }
+      .ec-teaser-content { width: 62%; padding: 64px 48px; }
       .footer-top { grid-template-columns: 1fr 1fr; gap: 40px; }
     }
 
